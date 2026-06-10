@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Copa 2026 · Painel</title>
+<meta name="theme-color" content="#090E1D">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Copa 2026">
+<link rel="manifest" href='data:application/manifest+json,{"name":"Copa 2026 · Painel","short_name":"Copa 2026","display":"standalone","background_color":"%23090E1D","theme_color":"%23090E1D","start_url":"."}'>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#090E1D; --ink2:#0E1430; --surf:#141D3C; --surf2:#1B2750; --surf3:#22305f;
+  --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.16);
+  --tx:#ECF1FF; --mut:#93A0C8; --mut2:#6C789E;
+  --grn:#26E68A; --grn-d:#0c9d5b; --gold:#FFC845; --coral:#FF5C7A; --blu:#5AA8FF; --vio:#A77BFF;
+  --r:16px; --r2:12px;
+  --grad:linear-gradient(90deg,var(--grn) 0%,var(--blu) 48%,var(--vio) 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:'Inter',system-ui,sans-serif;background:var(--ink);color:var(--tx);
+  font-variant-numeric:tabular-nums;line-height:1.45;min-height:100vh;
+  background-image:radial-gradient(1200px 700px at 12% -8%,rgba(90,168,255,.10),transparent 60%),
+                   radial-gradient(1000px 600px at 92% -4%,rgba(167,123,255,.09),transparent 60%),
+                   radial-gradient(900px 700px at 50% 110%,rgba(38,230,138,.07),transparent 60%);
+  background-attachment:fixed;
+}
+img{display:block}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(12px,3vw,28px)}
+
+/* ===== Header ===== */
+header{position:sticky;top:0;z-index:40;background:rgba(9,14,29,.82);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line)}
+.hbar{display:flex;align-items:center;gap:14px;padding:12px 0 0}
+.brand{display:flex;align-items:center;gap:11px;min-width:0}
+.logo{width:46px;height:46px;border-radius:12px;background:var(--grad);display:grid;place-items:center;
+  font-family:'Anton';font-size:21px;color:#06121f;letter-spacing:-1px;flex:none;box-shadow:0 6px 22px rgba(38,230,138,.22)}
+.brand h1{font-family:'Anton';font-weight:400;font-size:clamp(18px,2.6vw,25px);letter-spacing:.5px;line-height:1;text-transform:uppercase}
+.brand .sub{font-size:11px;color:var(--mut);letter-spacing:2px;text-transform:uppercase;margin-top:3px;font-weight:600}
+.htools{margin-left:auto;display:flex;align-items:center;gap:9px}
+.tz{display:flex;align-items:center;gap:7px;font-size:11.5px;color:var(--mut);font-weight:600;
+  border:1px solid var(--line);padding:7px 11px;border-radius:999px;white-space:nowrap}
+.tz b{color:var(--tx)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--grn);box-shadow:0 0 0 4px rgba(38,230,138,.18)}
+.btn-ia{display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;padding:9px 14px;border-radius:999px;
+  background:var(--grad);color:#06121f;box-shadow:0 6px 18px rgba(90,168,255,.25);transition:transform .12s}
+.btn-ia:active{transform:scale(.96)}
+.btn-ia:disabled{opacity:.6;cursor:wait}
+.tabs{display:flex;gap:4px;margin-top:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{font-size:14px;font-weight:700;color:var(--mut);padding:12px 16px;border-radius:11px 11px 0 0;
+  border-bottom:3px solid transparent;white-space:nowrap;transition:color .15s}
+.tab:hover{color:var(--tx)}
+.tab.on{color:var(--tx);border-bottom-color:var(--grn)}
+.tab .c{font-size:11px;color:var(--mut2);margin-left:4px;font-weight:600}
+
+/* ===== Hero / próximo jogo ===== */
+.hero{margin:20px 0 6px;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);
+  background:linear-gradient(125deg,var(--ink2),var(--surf));position:relative}
+.hero::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad)}
+.hero-in{padding:clamp(16px,3vw,26px);display:flex;align-items:center;gap:clamp(14px,3vw,40px);flex-wrap:wrap}
+.hero-lab{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--grn);font-weight:800;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.hmatch{display:flex;align-items:center;gap:clamp(10px,2.5vw,22px)}
+.hteam{display:flex;flex-direction:column;align-items:center;gap:9px;width:clamp(78px,16vw,118px)}
+.hteam img{width:clamp(46px,9vw,66px);height:auto;border-radius:7px;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+.hteam span{font-size:clamp(12px,1.5vw,15px);font-weight:700;text-align:center;line-height:1.15}
+.hx{font-family:'Anton';font-size:clamp(20px,4vw,30px);color:var(--mut2)}
+.hcount{margin-left:auto;text-align:right;min-width:150px}
+.hcount .cd{font-family:'Anton';font-size:clamp(26px,5vw,42px);letter-spacing:1px;line-height:1;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hcount .meta{font-size:13px;color:var(--mut);margin-top:8px;font-weight:600}
+.hcount .meta b{color:var(--tx)}
+.live-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,92,122,.16);color:var(--coral);
+  font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.live-pill .dot{background:var(--coral);box-shadow:0 0 0 4px rgba(255,92,122,.2);animation:pulse 1.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+main{padding-bottom:60px}
+.view{display:none}
+.view.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* ===== Grupos ===== */
+.grid{display:grid;gap:16px;margin-top:18px;grid-template-columns:repeat(auto-fill,minmax(330px,1fr))}
+.gcard{background:linear-gradient(180deg,var(--surf),var(--ink2));border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.gh{display:flex;align-items:center;gap:11px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.gh .gl{font-family:'Anton';font-size:17px;width:34px;height:34px;border-radius:9px;display:grid;place-items:center;
+  background:var(--surf2);color:var(--grn);flex:none}
+.gh .gt{font-size:12px;font-weight:700;color:var(--mut);letter-spacing:1px;text-transform:uppercase}
+.gh .gd{margin-left:auto;font-size:11px;color:var(--mut2);font-weight:600}
+table{width:100%;border-collapse:collapse}
+.stand th{font-size:10px;color:var(--mut2);font-weight:700;text-transform:uppercase;letter-spacing:.5px;text-align:center;padding:9px 3px}
+.stand th.tl{text-align:left;padding-left:14px}
+.stand td{padding:8px 3px;text-align:center;font-size:13px;border-top:1px solid var(--line);font-weight:600}
+.stand td.tm{text-align:left;padding-left:8px}
+.stand td.pts{font-weight:800;color:var(--tx)}
+.team-c{display:flex;align-items:center;gap:9px;min-width:0}
+.team-c img{width:24px;height:18px;border-radius:3px;flex:none;object-fit:cover;box-shadow:0 1px 3px rgba(0,0,0,.4)}
+.team-c span{font-size:12.5px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pos{position:relative}
+.pos .n{display:inline-grid;place-items:center;width:19px;height:19px;border-radius:6px;font-size:11px;font-weight:800;color:var(--mut)}
+tr.q1 .n,tr.q2 .n{background:rgba(38,230,138,.16);color:var(--grn)}
+tr.q3 .n{background:rgba(255,200,69,.15);color:var(--gold)}
+tr.q1,tr.q2{box-shadow:inset 3px 0 0 var(--grn-d)}
+tr.q3{box-shadow:inset 3px 0 0 rgba(255,200,69,.5)}
+.gmatches{border-top:1px solid var(--line)}
+.gmt{display:flex;align-items:center;justify-content:space-between;width:100%;padding:11px 16px;font-size:12px;color:var(--mut);font-weight:700}
+.gmt:hover{color:var(--tx)}
+.gmt .chev{transition:transform .2s;color:var(--mut2)}
+.gmt.open .chev{transform:rotate(180deg)}
+.gmlist{display:none;padding:2px 10px 10px}
+.gmlist.open{display:block}
+
+/* ===== match row ===== */
+.mrow{display:flex;align-items:center;gap:10px;padding:9px 8px;border-radius:10px;width:100%;text-align:left;transition:background .12s}
+.mrow:hover{background:var(--surf2)}
+.mrow .time{width:54px;flex:none;text-align:center}
+.mrow .time .t{font-size:14px;font-weight:800}
+.mrow .time .d{font-size:10px;color:var(--mut2);font-weight:600;margin-top:1px}
+.mrow .ms{flex:1;min-width:0;display:flex;flex-direction:column;gap:5px}
+.mside{display:flex;align-items:center;gap:8px}
+.mside img{width:22px;height:16px;border-radius:3px;flex:none;object-fit:cover}
+.mside .nm{font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mside.win .nm{color:var(--tx);font-weight:800}
+.mside.lose{opacity:.55}
+.mside .sc{margin-left:auto;font-size:15px;font-weight:800;width:26px;text-align:center}
+.mside .sc.e{color:var(--mut2)}
+.mstat{flex:none;width:60px;text-align:right}
+.tag{font-size:9.5px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;padding:4px 7px;border-radius:7px;display:inline-block}
+.tag.fim{background:var(--surf2);color:var(--mut)}
+.tag.viv{background:rgba(255,92,122,.16);color:var(--coral);animation:pulse 1.5s infinite}
+.tag.age{background:transparent;color:var(--mut2)}
+.tag.pen{background:rgba(255,200,69,.14);color:var(--gold)}
+.venue{font-size:10px;color:var(--mut2);margin-top:1px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* ===== Jogos (lista por dia) ===== */
+.daysel{display:flex;gap:7px;overflow-x:auto;padding:16px 0 4px;scrollbar-width:none}
+.daysel::-webkit-scrollbar{display:none}
+.dchip{flex:none;border:1px solid var(--line);border-radius:11px;padding:9px 13px;text-align:center;min-width:62px;transition:.15s}
+.dchip.on{background:var(--surf2);border-color:var(--line2)}
+.dchip .dn{font-size:10px;color:var(--mut2);text-transform:uppercase;font-weight:700;letter-spacing:.5px}
+.dchip .dd{font-family:'Anton';font-size:16px;margin-top:2px}
+.dchip.on .dd{color:var(--grn)}
+.daysec{margin-top:8px}
+.dayhd{font-size:12px;font-weight:800;color:var(--mut);text-transform:uppercase;letter-spacing:1.5px;
+  padding:18px 4px 8px;display:flex;align-items:center;gap:10px}
+.dayhd::after{content:"";flex:1;height:1px;background:var(--line)}
+.jrow{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--line);border-radius:13px;
+  background:var(--surf);margin-bottom:9px;width:100%;text-align:left;transition:.12s}
+.jrow:hover{border-color:var(--line2);background:var(--surf2)}
+.jrow .gtag{flex:none;font-size:10px;font-weight:800;color:var(--mut2);width:46px}
+.jrow .gtag b{display:block;font-size:9px;color:var(--mut2);font-weight:700}
+.jrow .gtag .gg{font-family:'Anton';font-size:15px;color:var(--blu)}
+.jrow .jt{flex:none;width:48px;text-align:center}
+.jrow .jt .t{font-size:15px;font-weight:800}
+.jrow .jt .tag{margin-top:3px}
+.jrow .jmid{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px}
+.jrow .venue{margin-top:3px}
+
+/* ===== Mata-mata ===== */
+.kowrap{margin-top:18px}
+.konote{display:flex;gap:12px;align-items:flex-start;background:var(--surf);border:1px solid var(--line);
+  border-radius:13px;padding:13px 15px;font-size:12.5px;color:var(--mut);margin-bottom:18px;line-height:1.5}
+.konote b{color:var(--tx)}
+.bracket{display:flex;gap:18px;overflow-x:auto;padding-bottom:18px;-webkit-overflow-scrolling:touch}
+.bracket::-webkit-scrollbar{height:8px}
+.bracket::-webkit-scrollbar-thumb{background:var(--surf2);border-radius:8px}
+.rnd{flex:none;width:248px;display:flex;flex-direction:column;gap:11px}
+.rnd-h{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--mut);
+  padding:6px 4px;position:sticky;top:0}
+.rnd.r32{width:262px}
+.kmatch{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:10px 11px;transition:.12s;width:100%;text-align:left}
+.kmatch:hover{border-color:var(--line2)}
+.kmatch .kid{font-size:9.5px;color:var(--mut2);font-weight:700;display:flex;justify-content:space-between;margin-bottom:7px}
+.kmatch .kid .kt{color:var(--mut)}
+.kside{display:flex;align-items:center;gap:8px;padding:4px 0}
+.kside img{width:22px;height:16px;border-radius:3px;flex:none;object-fit:cover}
+.kside .flagph{width:22px;height:16px;border-radius:3px;flex:none;background:var(--surf3);display:grid;place-items:center;font-size:9px;color:var(--mut2);font-weight:800}
+.kside .nm{font-size:12.5px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.kside .nm.ph{color:var(--mut2);font-weight:600;font-style:italic;font-size:11.5px}
+.kside .ks{margin-left:auto;font-size:14px;font-weight:800;width:22px;text-align:center}
+.kside.win .nm{font-weight:800}
+.kside.lose{opacity:.5}
+.kmatch .kfoot{font-size:10px;color:var(--mut2);font-weight:600;margin-top:7px;display:flex;justify-content:space-between;gap:6px}
+.final-card{background:linear-gradient(150deg,var(--surf2),var(--ink2));border-color:var(--line2)}
+.final-card .kid .kt{color:var(--gold)}
+.champ{display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px;background:linear-gradient(160deg,rgba(255,200,69,.13),var(--surf));
+  border:1px solid rgba(255,200,69,.3);border-radius:14px;text-align:center}
+.champ .ti{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:800}
+.champ img{width:60px;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.5)}
+.champ .nm{font-family:'Anton';font-size:20px}
+.champ .ph{color:var(--mut2);font-size:13px;font-style:italic}
+
+/* thirds table */
+.thirds{margin-top:26px;background:var(--surf);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;max-width:640px}
+.thirds .th-h{padding:14px 16px;border-bottom:1px solid var(--line);font-size:13px;font-weight:800;display:flex;align-items:center;gap:9px}
+.thirds .th-h .gl{font-size:11px;color:var(--mut);font-weight:600;margin-left:auto}
+
+/* ===== Modal editor ===== */
+.ov{position:fixed;inset:0;background:rgba(5,8,18,.72);backdrop-filter:blur(4px);z-index:90;
+  display:none;align-items:flex-end;justify-content:center}
+.ov.on{display:flex}
+@media(min-width:600px){.ov{align-items:center}}
+.modal{background:var(--ink2);border:1px solid var(--line2);border-radius:20px 20px 0 0;width:100%;max-width:440px;
+  padding:8px 20px 28px;animation:up .25s ease}
+@media(min-width:600px){.modal{border-radius:20px}}
+@keyframes up{from{transform:translateY(40px);opacity:.6}to{transform:none;opacity:1}}
+.modal .grab{width:42px;height:5px;border-radius:3px;background:var(--surf3);margin:8px auto 14px}
+.m-meta{text-align:center;font-size:11.5px;color:var(--mut);font-weight:600;margin-bottom:4px}
+.m-meta b{color:var(--tx)}
+.m-stage{text-align:center;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--blu);font-weight:800;margin-bottom:18px}
+.ed{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:14px}
+.ed .et{display:flex;align-items:center;gap:11px;min-width:0;flex:1}
+.ed .et img{width:34px;height:25px;border-radius:4px;flex:none;object-fit:cover}
+.ed .et .flagph{width:34px;height:25px;border-radius:4px;flex:none;background:var(--surf3);display:grid;place-items:center;font-size:10px;color:var(--mut2);font-weight:800}
+.ed .et .nm{font-size:15px;font-weight:700;overflow:hidden;text-overflow:ellipsis}
+.step{display:flex;align-items:center;gap:9px;flex:none}
+.step button{width:34px;height:34px;border-radius:9px;background:var(--surf2);font-size:20px;font-weight:700;
+  display:grid;place-items:center;color:var(--tx);transition:.1s}
+.step button:active{background:var(--surf3)}
+.step .sv{font-family:'Anton';font-size:26px;width:34px;text-align:center}
+.m-sel{margin:6px 0 16px}
+.m-sel label{font-size:11px;color:var(--mut);font-weight:700;text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:7px}
+.m-sel select{width:100%;background:var(--surf2);border:1px solid var(--line);border-radius:10px;color:var(--tx);
+  padding:11px 12px;font-size:14px;font-family:inherit;font-weight:600}
+.adv{margin:4px 0 16px}
+.adv .lab{font-size:11px;color:var(--mut);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.adv .opts{display:flex;gap:8px}
+.adv .opt{flex:1;border:1px solid var(--line);border-radius:10px;padding:10px;font-size:13px;font-weight:700;
+  display:flex;align-items:center;gap:8px;justify-content:center;transition:.12s}
+.adv .opt img{width:20px;height:15px;border-radius:3px}
+.adv .opt.on{border-color:var(--grn);background:rgba(38,230,138,.1);color:var(--grn)}
+.m-actions{display:flex;gap:10px;margin-top:8px}
+.m-actions button{flex:1;padding:13px;border-radius:11px;font-size:14px;font-weight:800;transition:.12s}
+.m-save{background:var(--grad);color:#06121f}
+.m-clear{background:var(--surf2);color:var(--mut)}
+.m-save:active,.m-clear:active{transform:scale(.97)}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(80px);z-index:120;
+  background:var(--surf2);border:1px solid var(--line2);border-radius:12px;padding:12px 18px;font-size:13px;font-weight:700;
+  box-shadow:0 10px 30px rgba(0,0,0,.5);opacity:0;transition:.3s;max-width:90vw;text-align:center}
+.toast.on{transform:translateX(-50%);opacity:1}
+.foot{text-align:center;color:var(--mut2);font-size:11px;padding:30px 12px 12px;line-height:1.6}
+.foot a{color:var(--mut)}
+/* ===== Favoritos ===== */
+.btn-star{display:flex;align-items:center;font-size:15px;padding:8px 11px;border-radius:999px;
+  border:1px solid var(--line2);background:var(--surf);transition:.12s}
+.btn-star:active{transform:scale(.94)}
+.favstar{color:var(--gold);font-size:11px;margin-left:4px;flex:none}
+tr.favr{background:rgba(255,200,69,.05)}
+.mrow.favm,.jrow.favm{box-shadow:inset 3px 0 0 var(--gold)}
+.jrow.favm{border-color:rgba(255,200,69,.35)}
+.favgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px;
+  max-height:46vh;overflow-y:auto;margin:14px 0 16px;padding:2px}
+.favchip{display:flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:10px;
+  padding:8px 9px;font-size:11.5px;font-weight:600;transition:.12s;text-align:left;min-width:0}
+.favchip img{width:20px;height:15px;border-radius:3px;object-fit:cover;flex:none}
+.favchip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.favchip.on{border-color:var(--gold);background:rgba(255,200,69,.12);color:var(--gold)}
+/* ===== Badges de classificação ===== */
+.qb{font-size:9px;font-weight:800;padding:2px 5px;border-radius:5px;margin-left:5px;letter-spacing:.3px;flex:none}
+.qb-qual{background:rgba(38,230,138,.16);color:var(--grn)}
+.qb-t3{background:rgba(255,200,69,.15);color:var(--gold)}
+.qb-elim{background:rgba(255,92,122,.14);color:var(--coral)}
+/* ===== Simulador ===== */
+.simbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.simtog{border:1px solid rgba(167,123,255,.4);border-radius:999px;padding:9px 15px;font-size:12.5px;
+  font-weight:700;color:var(--vio);background:rgba(167,123,255,.08);transition:.12s}
+.simtog.on{background:var(--vio);color:#0a0518;border-color:var(--vio)}
+.simtog:active{transform:scale(.97)}
+.simhint{font-size:11px;color:var(--mut);font-weight:600}
+.simhint i{color:var(--vio)}
+.kside.simgh .nm{font-style:italic;color:var(--vio);font-weight:600}
+.kside.simgh img{opacity:.8}
+.bracket.simmode .kmatch{border-style:dashed}
+/* ===== Compartilhar ===== */
+.shbtn{font-size:14px;padding:6px 8px;border-radius:8px;color:var(--mut);transition:.12s;flex:none}
+.shbtn:hover{background:var(--surf2);color:var(--tx)}
+/* ===== Placar ao vivo no hero ===== */
+.hsc{font-family:'Anton';font-size:clamp(24px,5vw,38px);color:var(--tx);letter-spacing:1px}
+@media(max-width:480px){
+  .hcount{width:100%;text-align:left;margin-left:0}
+  .hcount .meta{margin-top:6px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="hbar">
+      <div class="brand">
+        <div class="logo">26</div>
+        <div>
+          <h1>Copa 2026</h1>
+          <div class="sub">EUA · Canadá · México</div>
+        </div>
+      </div>
+      <div class="htools">
+        <div class="tz" id="syncTz"><span class="dot" id="syncDot"></span> <b id="syncLbl">Resultados ao vivo</b></div>
+        <button class="btn-star" id="favBtn" title="Minhas seleções">⭐</button>
+        <button class="btn-ia" id="iaBtn" title="Buscar resultados agora no feed (ESPN)">⚡ Atualizar</button>
+      </div>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button class="tab on" data-v="grupos">Grupos</button>
+      <button class="tab" data-v="jogos">Jogos</button>
+      <button class="tab" data-v="mata">Mata-mata</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- HERO -->
+  <section class="hero" id="hero"></section>
+
+  <!-- GRUPOS -->
+  <section class="view on" id="v-grupos"><div class="grid" id="groupsGrid"></div></section>
+
+  <!-- JOGOS -->
+  <section class="view" id="v-jogos">
+    <div class="daysel" id="daysel"></div>
+    <div id="jogosList"></div>
+  </section>
+
+  <!-- MATA-MATA -->
+  <section class="view" id="v-mata">
+    <div class="kowrap">
+      <div class="konote">
+        <span style="font-size:18px">🏆</span>
+        <div>Os <b>16 jogos das oitavas de 32</b> são preenchidos automaticamente conforme a classificação dos grupos. As vagas de <b>melhor 3º colocado</b> ficam abertas até a fase de grupos terminar — toque no jogo para definir quem avança (incluindo decisão por pênaltis). Vencedores avançam sozinhos pelo chaveamento oficial até a final no <b>MetLife (Nova Jersey)</b>, 19/07.</div>
+      </div>
+      <div class="simbar" id="simbar"></div>
+      <div class="bracket" id="bracket"></div>
+      <div class="thirds" id="thirdsBox"></div>
+    </div>
+  </section>
+</main>
+
+<!-- MODAL -->
+<div class="ov" id="ov">
+  <div class="modal" id="modal"></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<div class="foot">
+  Painel não-oficial · dados do sorteio FIFA (05/12/2025) e tabela oficial da Copa 2026.<br>
+  Placares preenchidos automaticamente pelo feed da <b>ESPN</b> (atualiza sozinho durante os jogos). Toque em qualquer partida para editar manualmente.<br>
+  📲 Dica: use <b>"Adicionar à tela de início"</b> no navegador para abrir como app.
+</div>
+
+<script>
+"use strict";
+/* ============================ DADOS ============================ */
+const T = {
+  MEX:["México","mx"], RSA:["África do Sul","za"], KOR:["Coreia do Sul","kr"], CZE:["Tchéquia","cz"],
+  CAN:["Canadá","ca"], BIH:["Bósnia e Herzeg.","ba"], QAT:["Catar","qa"], SUI:["Suíça","ch"],
+  BRA:["Brasil","br"], MAR:["Marrocos","ma"], HAI:["Haiti","ht"], SCO:["Escócia","gb-sct"],
+  USA:["Estados Unidos","us"], PAR:["Paraguai","py"], AUS:["Austrália","au"], TUR:["Turquia","tr"],
+  GER:["Alemanha","de"], CUW:["Curaçao","cw"], CIV:["Costa do Marfim","ci"], ECU:["Equador","ec"],
+  NED:["Países Baixos","nl"], JPN:["Japão","jp"], SWE:["Suécia","se"], TUN:["Tunísia","tn"],
+  BEL:["Bélgica","be"], EGY:["Egito","eg"], IRN:["Irã","ir"], NZL:["Nova Zelândia","nz"],
+  ESP:["Espanha","es"], CPV:["Cabo Verde","cv"], KSA:["Arábia Saudita","sa"], URU:["Uruguai","uy"],
+  FRA:["França","fr"], SEN:["Senegal","sn"], IRQ:["Iraque","iq"], NOR:["Noruega","no"],
+  ARG:["Argentina","ar"], ALG:["Argélia","dz"], AUT:["Áustria","at"], JOR:["Jordânia","jo"],
+  POR:["Portugal","pt"], COD:["RD Congo","cd"], UZB:["Uzbequistão","uz"], COL:["Colômbia","co"],
+  ENG:["Inglaterra","gb-eng"], CRO:["Croácia","hr"], GHA:["Gana","gh"], PAN:["Panamá","pa"]
+};
+const GROUPS = {
+  A:["MEX","RSA","KOR","CZE"], B:["CAN","BIH","QAT","SUI"], C:["BRA","MAR","HAI","SCO"],
+  D:["USA","PAR","AUS","TUR"], E:["GER","CUW","CIV","ECU"], F:["NED","JPN","SWE","TUN"],
+  G:["BEL","EGY","IRN","NZL"], H:["ESP","CPV","KSA","URU"], I:["FRA","SEN","IRQ","NOR"],
+  J:["ARG","ALG","AUT","JOR"], K:["POR","COD","UZB","COL"], L:["ENG","CRO","GHA","PAN"]
+};
+// [id, grupo, ISO(ET -04:00), casa, fora, estádio, cidade]
+const GM = [
+ ["A1","A","2026-06-11T15:00:00-04:00","MEX","RSA","Estadio Azteca","Cidade do México"],
+ ["A2","A","2026-06-11T22:00:00-04:00","KOR","CZE","Estadio Akron","Guadalajara"],
+ ["A3","A","2026-06-18T12:00:00-04:00","CZE","RSA","Mercedes-Benz","Atlanta"],
+ ["A4","A","2026-06-18T21:00:00-04:00","MEX","KOR","Estadio Akron","Guadalajara"],
+ ["A5","A","2026-06-24T21:00:00-04:00","CZE","MEX","Estadio Azteca","Cidade do México"],
+ ["A6","A","2026-06-24T21:00:00-04:00","RSA","KOR","Estadio BBVA","Monterrey"],
+ ["B1","B","2026-06-12T15:00:00-04:00","CAN","BIH","BMO Field","Toronto"],
+ ["B2","B","2026-06-13T15:00:00-04:00","QAT","SUI","Levi's Stadium","Santa Clara"],
+ ["B3","B","2026-06-18T15:00:00-04:00","SUI","BIH","SoFi Stadium","Inglewood"],
+ ["B4","B","2026-06-18T18:00:00-04:00","CAN","QAT","BC Place","Vancouver"],
+ ["B5","B","2026-06-24T15:00:00-04:00","SUI","CAN","BC Place","Vancouver"],
+ ["B6","B","2026-06-24T15:00:00-04:00","BIH","QAT","Lumen Field","Seattle"],
+ ["C1","C","2026-06-13T18:00:00-04:00","BRA","MAR","MetLife Stadium","East Rutherford"],
+ ["C2","C","2026-06-13T21:00:00-04:00","HAI","SCO","Gillette Stadium","Foxborough"],
+ ["C3","C","2026-06-19T18:00:00-04:00","SCO","MAR","Gillette Stadium","Foxborough"],
+ ["C4","C","2026-06-19T20:30:00-04:00","BRA","HAI","Lincoln Financial","Filadélfia"],
+ ["C5","C","2026-06-24T18:00:00-04:00","SCO","BRA","Hard Rock Stadium","Miami"],
+ ["C6","C","2026-06-24T18:00:00-04:00","MAR","HAI","Mercedes-Benz","Atlanta"],
+ ["D1","D","2026-06-12T21:00:00-04:00","USA","PAR","SoFi Stadium","Inglewood"],
+ ["D2","D","2026-06-13T00:00:00-04:00","AUS","TUR","BC Place","Vancouver"],
+ ["D3","D","2026-06-19T15:00:00-04:00","USA","AUS","Lumen Field","Seattle"],
+ ["D4","D","2026-06-19T23:00:00-04:00","TUR","PAR","Levi's Stadium","Santa Clara"],
+ ["D5","D","2026-06-25T22:00:00-04:00","TUR","USA","SoFi Stadium","Inglewood"],
+ ["D6","D","2026-06-25T22:00:00-04:00","PAR","AUS","Levi's Stadium","Santa Clara"],
+ ["E1","E","2026-06-14T13:00:00-04:00","GER","CUW","NRG Stadium","Houston"],
+ ["E2","E","2026-06-14T19:00:00-04:00","CIV","ECU","Lincoln Financial","Filadélfia"],
+ ["E3","E","2026-06-20T16:00:00-04:00","GER","CIV","BMO Field","Toronto"],
+ ["E4","E","2026-06-20T20:00:00-04:00","ECU","CUW","Arrowhead","Kansas City"],
+ ["E5","E","2026-06-25T16:00:00-04:00","CUW","CIV","Lincoln Financial","Filadélfia"],
+ ["E6","E","2026-06-25T16:00:00-04:00","ECU","GER","MetLife Stadium","East Rutherford"],
+ ["F1","F","2026-06-14T16:00:00-04:00","NED","JPN","AT&T Stadium","Arlington"],
+ ["F2","F","2026-06-14T22:00:00-04:00","SWE","TUN","Estadio BBVA","Monterrey"],
+ ["F3","F","2026-06-20T13:00:00-04:00","NED","SWE","NRG Stadium","Houston"],
+ ["F4","F","2026-06-20T00:00:00-04:00","TUN","JPN","Estadio BBVA","Monterrey"],
+ ["F5","F","2026-06-25T19:00:00-04:00","JPN","SWE","AT&T Stadium","Arlington"],
+ ["F6","F","2026-06-25T19:00:00-04:00","TUN","NED","Arrowhead","Kansas City"],
+ ["G1","G","2026-06-15T15:00:00-04:00","BEL","EGY","Lumen Field","Seattle"],
+ ["G2","G","2026-06-15T21:00:00-04:00","IRN","NZL","SoFi Stadium","Inglewood"],
+ ["G3","G","2026-06-21T15:00:00-04:00","BEL","IRN","SoFi Stadium","Inglewood"],
+ ["G4","G","2026-06-21T21:00:00-04:00","NZL","EGY","BC Place","Vancouver"],
+ ["G5","G","2026-06-26T23:00:00-04:00","EGY","IRN","Lumen Field","Seattle"],
+ ["G6","G","2026-06-26T23:00:00-04:00","NZL","BEL","BC Place","Vancouver"],
+ ["H1","H","2026-06-15T12:00:00-04:00","ESP","CPV","Mercedes-Benz","Atlanta"],
+ ["H2","H","2026-06-15T18:00:00-04:00","KSA","URU","Hard Rock Stadium","Miami"],
+ ["H3","H","2026-06-21T12:00:00-04:00","ESP","KSA","Mercedes-Benz","Atlanta"],
+ ["H4","H","2026-06-21T18:00:00-04:00","URU","CPV","Hard Rock Stadium","Miami"],
+ ["H5","H","2026-06-26T20:00:00-04:00","CPV","KSA","NRG Stadium","Houston"],
+ ["H6","H","2026-06-26T20:00:00-04:00","URU","ESP","Estadio Akron","Guadalajara"],
+ ["I1","I","2026-06-16T15:00:00-04:00","FRA","SEN","MetLife Stadium","East Rutherford"],
+ ["I2","I","2026-06-16T18:00:00-04:00","IRQ","NOR","Gillette Stadium","Foxborough"],
+ ["I3","I","2026-06-22T17:00:00-04:00","FRA","IRQ","Lincoln Financial","Filadélfia"],
+ ["I4","I","2026-06-22T20:00:00-04:00","NOR","SEN","MetLife Stadium","East Rutherford"],
+ ["I5","I","2026-06-26T15:00:00-04:00","NOR","FRA","Gillette Stadium","Foxborough"],
+ ["I6","I","2026-06-26T15:00:00-04:00","SEN","IRQ","BMO Field","Toronto"],
+ ["J1","J","2026-06-16T21:00:00-04:00","ARG","ALG","Arrowhead","Kansas City"],
+ ["J2","J","2026-06-16T00:00:00-04:00","AUT","JOR","Levi's Stadium","Santa Clara"],
+ ["J3","J","2026-06-22T13:00:00-04:00","ARG","AUT","AT&T Stadium","Arlington"],
+ ["J4","J","2026-06-22T23:00:00-04:00","JOR","ALG","Levi's Stadium","Santa Clara"],
+ ["J5","J","2026-06-27T22:00:00-04:00","JOR","ARG","AT&T Stadium","Arlington"],
+ ["J6","J","2026-06-27T22:00:00-04:00","ALG","AUT","Arrowhead","Kansas City"],
+ ["K1","K","2026-06-17T13:00:00-04:00","POR","COD","NRG Stadium","Houston"],
+ ["K2","K","2026-06-17T22:00:00-04:00","UZB","COL","Estadio Azteca","Cidade do México"],
+ ["K3","K","2026-06-23T13:00:00-04:00","POR","UZB","NRG Stadium","Houston"],
+ ["K4","K","2026-06-23T22:00:00-04:00","COL","COD","Estadio Akron","Guadalajara"],
+ ["K5","K","2026-06-27T19:30:00-04:00","COL","POR","Hard Rock Stadium","Miami"],
+ ["K6","K","2026-06-27T19:30:00-04:00","COD","UZB","Mercedes-Benz","Atlanta"],
+ ["L1","L","2026-06-17T16:00:00-04:00","ENG","CRO","AT&T Stadium","Arlington"],
+ ["L2","L","2026-06-17T19:00:00-04:00","GHA","PAN","BMO Field","Toronto"],
+ ["L3","L","2026-06-23T16:00:00-04:00","ENG","GHA","Gillette Stadium","Foxborough"],
+ ["L4","L","2026-06-23T19:00:00-04:00","PAN","CRO","BMO Field","Toronto"],
+ ["L5","L","2026-06-27T17:00:00-04:00","PAN","ENG","MetLife Stadium","East Rutherford"],
+ ["L6","L","2026-06-27T17:00:00-04:00","CRO","GHA","Lincoln Financial","Filadélfia"]
+];
+
+// Mata-mata. slot tipos: W=vencedor grupo, R=vice grupo, T3=melhor 3º (groups=elegíveis), WIN/LOS=de jogo k.
+// feed: para onde vai o vencedor [matchId,'H'|'A']. SF tem feedW (final) e feedL (3º lugar).
+const KO = {
+ 73:{r:"R32",d:"2026-06-28T15:00:00-04:00",v:"SoFi Stadium",c:"Inglewood",h:{t:"R",g:"A"},a:{t:"R",g:"B"},feed:[90,"H"]},
+ 74:{r:"R32",d:"2026-06-29T16:30:00-04:00",v:"Gillette Stadium",c:"Boston",h:{t:"W",g:"E"},a:{t:"T3",g:["A","B","C","D","F"]},feed:[89,"H"]},
+ 75:{r:"R32",d:"2026-06-29T21:00:00-04:00",v:"Estadio BBVA",c:"Monterrey",h:{t:"W",g:"F"},a:{t:"R",g:"C"},feed:[90,"A"]},
+ 76:{r:"R32",d:"2026-06-29T13:00:00-04:00",v:"NRG Stadium",c:"Houston",h:{t:"W",g:"C"},a:{t:"R",g:"F"},feed:[91,"H"]},
+ 77:{r:"R32",d:"2026-06-30T17:00:00-04:00",v:"MetLife Stadium",c:"East Rutherford",h:{t:"W",g:"I"},a:{t:"T3",g:["C","D","F","G","H"]},feed:[89,"A"]},
+ 78:{r:"R32",d:"2026-06-30T13:00:00-04:00",v:"AT&T Stadium",c:"Dallas",h:{t:"R",g:"E"},a:{t:"R",g:"I"},feed:[91,"A"]},
+ 79:{r:"R32",d:"2026-06-30T21:00:00-04:00",v:"Estadio Azteca",c:"Cidade do México",h:{t:"W",g:"A"},a:{t:"T3",g:["C","E","F","H","I"]},feed:[92,"H"]},
+ 80:{r:"R32",d:"2026-07-01T12:00:00-04:00",v:"Mercedes-Benz",c:"Atlanta",h:{t:"W",g:"L"},a:{t:"T3",g:["E","H","I","J","K"]},feed:[92,"A"]},
+ 81:{r:"R32",d:"2026-07-01T20:00:00-04:00",v:"Levi's Stadium",c:"São Francisco",h:{t:"W",g:"D"},a:{t:"T3",g:["B","E","F","I","J"]},feed:[94,"H"]},
+ 82:{r:"R32",d:"2026-07-01T16:00:00-04:00",v:"Lumen Field",c:"Seattle",h:{t:"W",g:"G"},a:{t:"T3",g:["A","E","H","I","J"]},feed:[94,"A"]},
+ 83:{r:"R32",d:"2026-07-02T19:00:00-04:00",v:"BMO Field",c:"Toronto",h:{t:"R",g:"K"},a:{t:"R",g:"L"},feed:[93,"H"]},
+ 84:{r:"R32",d:"2026-07-02T15:00:00-04:00",v:"SoFi Stadium",c:"Inglewood",h:{t:"W",g:"H"},a:{t:"R",g:"J"},feed:[93,"A"]},
+ 85:{r:"R32",d:"2026-07-02T23:00:00-04:00",v:"BC Place",c:"Vancouver",h:{t:"W",g:"B"},a:{t:"T3",g:["E","F","G","I","J"]},feed:[96,"H"]},
+ 86:{r:"R32",d:"2026-07-03T18:00:00-04:00",v:"Hard Rock Stadium",c:"Miami",h:{t:"W",g:"J"},a:{t:"R",g:"H"},feed:[95,"H"]},
+ 87:{r:"R32",d:"2026-07-03T21:30:00-04:00",v:"Arrowhead",c:"Kansas City",h:{t:"W",g:"K"},a:{t:"T3",g:["D","E","I","J","L"]},feed:[96,"A"]},
+ 88:{r:"R32",d:"2026-07-03T14:00:00-04:00",v:"AT&T Stadium",c:"Dallas",h:{t:"R",g:"D"},a:{t:"R",g:"G"},feed:[95,"A"]},
+ 89:{r:"R16",d:"2026-07-04T17:00:00-04:00",v:"Lincoln Financial",c:"Filadélfia",h:{t:"WIN",k:74},a:{t:"WIN",k:77},feed:[97,"H"]},
+ 90:{r:"R16",d:"2026-07-04T13:00:00-04:00",v:"NRG Stadium",c:"Houston",h:{t:"WIN",k:73},a:{t:"WIN",k:75},feed:[97,"A"]},
+ 91:{r:"R16",d:"2026-07-05T16:00:00-04:00",v:"MetLife Stadium",c:"East Rutherford",h:{t:"WIN",k:76},a:{t:"WIN",k:78},feed:[99,"H"]},
+ 92:{r:"R16",d:"2026-07-05T20:00:00-04:00",v:"Estadio Azteca",c:"Cidade do México",h:{t:"WIN",k:79},a:{t:"WIN",k:80},feed:[99,"A"]},
+ 93:{r:"R16",d:"2026-07-06T15:00:00-04:00",v:"AT&T Stadium",c:"Dallas",h:{t:"WIN",k:83},a:{t:"WIN",k:84},feed:[98,"H"]},
+ 94:{r:"R16",d:"2026-07-06T20:00:00-04:00",v:"Lumen Field",c:"Seattle",h:{t:"WIN",k:81},a:{t:"WIN",k:82},feed:[98,"A"]},
+ 95:{r:"R16",d:"2026-07-07T12:00:00-04:00",v:"Mercedes-Benz",c:"Atlanta",h:{t:"WIN",k:86},a:{t:"WIN",k:88},feed:[100,"H"]},
+ 96:{r:"R16",d:"2026-07-07T16:00:00-04:00",v:"BC Place",c:"Vancouver",h:{t:"WIN",k:85},a:{t:"WIN",k:87},feed:[100,"A"]},
+ 97:{r:"QF",d:"2026-07-09T16:00:00-04:00",v:"Gillette Stadium",c:"Boston",h:{t:"WIN",k:89},a:{t:"WIN",k:90},feed:[101,"H"]},
+ 98:{r:"QF",d:"2026-07-10T15:00:00-04:00",v:"SoFi Stadium",c:"Inglewood",h:{t:"WIN",k:93},a:{t:"WIN",k:94},feed:[101,"A"]},
+ 99:{r:"QF",d:"2026-07-11T17:00:00-04:00",v:"Hard Rock Stadium",c:"Miami",h:{t:"WIN",k:91},a:{t:"WIN",k:92},feed:[102,"H"]},
+ 100:{r:"QF",d:"2026-07-11T21:00:00-04:00",v:"Arrowhead",c:"Kansas City",h:{t:"WIN",k:95},a:{t:"WIN",k:96},feed:[102,"A"]},
+ 101:{r:"SF",d:"2026-07-14T15:00:00-04:00",v:"AT&T Stadium",c:"Dallas",h:{t:"WIN",k:97},a:{t:"WIN",k:98},feedW:[104,"H"],feedL:[103,"H"]},
+ 102:{r:"SF",d:"2026-07-15T15:00:00-04:00",v:"Mercedes-Benz",c:"Atlanta",h:{t:"WIN",k:99},a:{t:"WIN",k:100},feedW:[104,"A"],feedL:[103,"A"]},
+ 103:{r:"3L",d:"2026-07-18T17:00:00-04:00",v:"Hard Rock Stadium",c:"Miami",h:{t:"LOS",k:101},a:{t:"LOS",k:102}},
+ 104:{r:"FIN",d:"2026-07-19T15:00:00-04:00",v:"MetLife Stadium",c:"East Rutherford",h:{t:"WIN",k:101},a:{t:"WIN",k:102}}
+};
+const ROUND_NAMES={R32:"Oitavas de 32",R16:"Oitavas de final",QF:"Quartas de final",SF:"Semifinais","3L":"Disputa de 3º",FIN:"Final"};
+
+/* ============================ ESTADO ============================ */
+let state={res:{},third:{},fav:[]}; // res[id]={h,a,adv?}  third[koMatchId]=teamCode  fav=[códigos das seleções seguidas]
+const SKEY="copa2026_v1";
+function load(){try{const s=JSON.parse(localStorage.getItem(SKEY));if(s){state=Object.assign({res:{},third:{},fav:[]},s)}}catch(e){}}
+function save(){try{localStorage.setItem(SKEY,JSON.stringify(state))}catch(e){}}
+load();
+
+/* ============================ HELPERS ============================ */
+const $=s=>document.querySelector(s);
+const tn=c=>T[c]?T[c][0]:c;
+const flag=c=>"https://flagcdn.com/"+T[c][1]+".svg";
+const DOW=["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"];
+function spParts(iso){
+  const d=new Date(iso);
+  const f=new Intl.DateTimeFormat("pt-BR",{timeZone:"America/Sao_Paulo",weekday:"short",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit",hour12:false});
+  const p={}; f.formatToParts(d).forEach(x=>p[x.type]=x.value);
+  return {dow:(p.weekday||"").replace(".","").replace(/^./,c=>c.toUpperCase()),dd:p.day,mm:p.month,hh:p.hour,mi:p.minute,
+          time:p.hour+":"+p.minute, date:p.day+"/"+p.month, key:`2026-${p.month}-${p.day}`};
+}
+function statusOf(id,iso){
+  const r=state.res[id];
+  if(r&&(r.h!=null&&r.a!=null||r.adv)) return "fim";
+  const now=Date.now(), ko=new Date(iso).getTime();
+  if(now<ko) return "age";
+  if(now<ko+115*60000) return "viv";
+  return "age2"; // já passou, sem placar
+}
+function flagImg(c,cls){return `<img class="${cls||''}" src="${flag(c)}" alt="${tn(c)}" loading="lazy" onerror="this.style.visibility='hidden'">`}
+
+/* --- favoritos --- */
+function isFav(c){return !!(state.fav&&state.fav.includes(c))}
+
+/* --- emoji de bandeira (p/ texto compartilhado) --- */
+function flagEmoji(c){
+  const iso=T[c]?T[c][1]:"";
+  if(iso==="gb-eng")return "🏴\u{E0067}\u{E0062}\u{E0065}\u{E006E}\u{E0067}\u{E007F}";
+  if(iso==="gb-sct")return "🏴\u{E0067}\u{E0062}\u{E0073}\u{E0063}\u{E0074}\u{E007F}";
+  return iso.slice(0,2).toUpperCase().replace(/./g,ch=>String.fromCodePoint(127397+ch.charCodeAt(0)));
+}
+
+/* --- compartilhar (Web Share API com fallback WhatsApp) --- */
+function doShare(txt){
+  if(navigator.share){navigator.share({text:txt}).catch(()=>{});}
+  else window.open("https://wa.me/?text="+encodeURIComponent(txt),"_blank");
+}
+function shareGroup(g){
+  const t=groupTable(g), med=["1️⃣","2️⃣","3️⃣","4️⃣"];
+  let txt=`🏆 COPA 2026 · GRUPO ${g}\n`;
+  t.forEach(r=>{txt+=`${med[r.pos-1]} ${flagEmoji(r.c)} ${tn(r.c)} — ${r.PT} pts (${r.P}J, SG ${r.GD>0?"+":""}${r.GD})\n`});
+  const nxt=GM.filter(m=>m[1]===g&&!(state.res[m[0]]&&state.res[m[0]].h!=null))
+    .sort((a,b)=>new Date(a[2])-new Date(b[2]))[0];
+  if(nxt){const sp=spParts(nxt[2]);
+    txt+=`\n⚽ Próximo: ${flagEmoji(nxt[3])} ${tn(nxt[3])} × ${flagEmoji(nxt[4])} ${tn(nxt[4])} · ${sp.dow} ${sp.date} ${sp.time} (Brasília)`;}
+  doShare(txt);
+}
+function shareNext(t){
+  if(!t)return;const sp=spParts(t.iso);
+  const hN=t.h?`${flagEmoji(t.h)} ${tn(t.h)}`:"A definir", aN=t.a?`${flagEmoji(t.a)} ${tn(t.a)}`:"A definir";
+  const lv=LIVE[t.id];
+  doShare(lv?`🔴 AO VIVO · Copa 2026\n${hN} ${lv.h} × ${lv.a} ${aN}${lv.clock?" · "+lv.clock:""}`
+            :`⚽ Copa 2026 — próximo jogo\n${hN} × ${aN}\n🗓 ${sp.dow}, ${sp.date} · ${sp.time} (Brasília)`);
+}
+
+/* --- notificações do navegador --- */
+const ICON_URL=(document.querySelector('link[rel="apple-touch-icon"]')||{}).href||undefined;
+function askNotifPermission(){try{if("Notification" in window&&Notification.permission==="default")Notification.requestPermission()}catch(e){}}
+function notify(title,body){
+  try{
+    if("Notification" in window&&Notification.permission==="granted")new Notification(title,{body,icon:ICON_URL});
+    else toast(body);
+  }catch(e){try{toast(body)}catch(_){}}
+}
+
+/* --- placares ao vivo (não persistidos; vêm do feed) --- */
+const LIVE={};            // id (GM ou "k"+n) -> {h,a,clock}
+let liveDirty=false;
+
+/* ============================ CLASSIFICAÇÃO ============================ */
+function blankRow(c){return{c,P:0,W:0,D:0,L:0,GF:0,GA:0}}
+function groupTable(g){
+  const rows={}; GROUPS[g].forEach(c=>rows[c]=blankRow(c));
+  const played=GM.filter(m=>m[1]===g).filter(m=>{const r=state.res[m[0]];return r&&r.h!=null&&r.a!=null});
+  played.forEach(m=>{
+    const r=state.res[m[0]],H=rows[m[3]],A=rows[m[4]];
+    H.P++;A.P++;H.GF+=r.h;H.GA+=r.a;A.GF+=r.a;A.GA+=r.h;
+    if(r.h>r.a){H.W++;A.L++}else if(r.h<r.a){A.W++;H.L++}else{H.D++;A.D++}
+  });
+  const pts=x=>x.W*3+x.D, gd=x=>x.GF-x.GA;
+  let arr=Object.values(rows);
+  // ordena: pts, SG, GF, confronto direto, GF geral, nome
+  arr.sort((x,y)=>{
+    if(pts(y)!==pts(x))return pts(y)-pts(x);
+    if(gd(y)!==gd(x))return gd(y)-gd(x);
+    if(y.GF!==x.GF)return y.GF-x.GF;
+    const h=h2h(g,x.c,y.c); if(h)return h;
+    return tn(x.c).localeCompare(tn(y.c));
+  });
+  return arr.map((r,i)=>Object.assign(r,{pos:i+1,PT:pts(r),GD:gd(r)}));
+}
+function h2h(g,a,b){
+  const m=GM.find(x=>x[1]===g&&((x[3]===a&&x[4]===b)||(x[3]===b&&x[4]===a)));
+  if(!m)return 0; const r=state.res[m[0]]; if(!r||r.h==null||r.a==null)return 0;
+  const aIsHome=m[3]===a, ag=aIsHome?r.h:r.a, bg=aIsHome?r.a:r.h;
+  return bg-ag; // a vence => negativo => a antes
+}
+function groupComplete(g){return GM.filter(m=>m[1]===g).every(m=>{const r=state.res[m[0]];return r&&r.h!=null&&r.a!=null})}
+
+/* Cenários por grupo: enumera TODOS os desfechos possíveis dos jogos restantes (≤3^6=729 combos)
+   e classifica cada time: "qual" = top-2 matematicamente garantido (empate em pts tratado pessimisticamente);
+   "t3" = top-2 impossível, mas 3º lugar ainda alcançável; "elim" = nem 3º é possível.
+   Retorna null se o grupo não começou ou já terminou. */
+function groupStatus(g){
+  const ms=GM.filter(m=>m[1]===g);
+  const rem=ms.filter(m=>{const r=state.res[m[0]];return !(r&&r.h!=null&&r.a!=null)});
+  if(rem.length===ms.length||rem.length===0)return null;
+  const base={};GROUPS[g].forEach(c=>base[c]=0);
+  ms.forEach(m=>{const r=state.res[m[0]];if(r&&r.h!=null&&r.a!=null){
+    if(r.h>r.a)base[m[3]]+=3;else if(r.h<r.a)base[m[4]]+=3;else{base[m[3]]++;base[m[4]]++}}});
+  const stat={};GROUPS[g].forEach(c=>stat[c]={g2:true,p2:false,p3:false});
+  const combos=Math.pow(3,rem.length);
+  for(let i=0;i<combos;i++){
+    const pts=Object.assign({},base);
+    let x=i;
+    for(const m of rem){const o=x%3;x=(x-o)/3;
+      if(o===0)pts[m[3]]+=3;else if(o===1)pts[m[4]]+=3;else{pts[m[3]]++;pts[m[4]]++}}
+    for(const c of GROUPS[g]){
+      let above=0,tied=0;
+      for(const o of GROUPS[g]){if(o===c)continue;if(pts[o]>pts[c])above++;else if(pts[o]===pts[c])tied++}
+      if(1+above+tied>2)stat[c].g2=false;   // pior caso (perde todo desempate)
+      if(1+above<=2)stat[c].p2=true;        // melhor caso (ganha todo desempate)
+      if(1+above<=3)stat[c].p3=true;
+    }
+  }
+  const out={};
+  for(const c of GROUPS[g]){
+    if(stat[c].g2)out[c]="qual";
+    else if(!stat[c].p2&&!stat[c].p3)out[c]="elim";
+    else if(!stat[c].p2)out[c]="t3";
+  }
+  return out;
+}
+function qBadge(s){
+  if(s==="qual")return `<span class="qb qb-qual" title="Vaga no mata-mata garantida (top-2 do grupo)">✓ oitavas</span>`;
+  if(s==="t3")return `<span class="qb qb-t3" title="Top-2 impossível — só avança como melhor 3º">só 3º</span>`;
+  if(s==="elim")return `<span class="qb qb-elim" title="Eliminado matematicamente">eliminado</span>`;
+  return "";
+}
+
+function thirdsRanking(){
+  const list=[];
+  for(const g in GROUPS){const t=groupTable(g);list.push(Object.assign({},t[2],{g,done:groupComplete(g)}))}
+  list.sort((x,y)=>{
+    if(x.PT!==y.PT)return y.PT-x.PT;
+    if(x.GD!==y.GD)return y.GD-x.GD;
+    if(x.GF!==y.GF)return y.GF-x.GF;
+    return tn(x.c).localeCompare(tn(y.c));
+  });
+  return list.map((r,i)=>Object.assign(r,{rank:i+1}));
+}
+
+/* ============================ MATA-MATA ============================ */
+let SIM=false, simOn=false, simThirdsCache=null;
+function koTeam(slot){
+  // retorna {c} time definido ou null. Em modo SIM, projeta grupos incompletos com a classificação atual.
+  if(slot.t==="W"||slot.t==="R"){
+    if(!groupComplete(slot.g)){
+      if(!SIM)return null;
+      const t=groupTable(slot.g); return {c:(slot.t==="W"?t[0].c:t[1].c),sim:true};
+    }
+    const t=groupTable(slot.g); return {c:(slot.t==="W"?t[0].c:t[1].c)};
+  }
+  if(slot.t==="T3"){ return null; } // definido manualmente (state.third) ou via SIM em koSides
+  if(slot.t==="WIN"||slot.t==="LOS"){
+    const w=koWinner(slot.k), l=koLoser(slot.k);
+    return slot.t==="WIN"?(w?{c:w}:null):(l?{c:l}:null);
+  }
+  return null;
+}
+/* Aloca os 8 melhores 3ºs nas vagas T3 respeitando os grupos elegíveis de cada jogo (backtracking). */
+function simThirds(){
+  if(simThirdsCache)return simThirdsCache;
+  const slots=Object.keys(KO).map(Number).filter(k=>KO[k].h.t==="T3"||KO[k].a.t==="T3");
+  const top8=thirdsRanking().slice(0,8);
+  const elig=id=>{const s=KO[id].h.t==="T3"?KO[id].h:KO[id].a;return top8.filter(t=>s.g.includes(t.g))};
+  const order=slots.slice().sort((a,b)=>elig(a).length-elig(b).length);
+  const res={},used=new Set();
+  (function bt(i){
+    if(i===order.length)return true;
+    const id=order[i];
+    for(const t of elig(id)){
+      if(used.has(t.c))continue;
+      used.add(t.c);res[id]=t.c;
+      if(bt(i+1))return true;
+      used.delete(t.c);delete res[id];
+    }
+    return false;
+  })(0);
+  simThirdsCache=res;return res;
+}
+function koSides(id){
+  const m=KO[id];
+  let H=koTeam(m.h), A=koTeam(m.a);
+  if(m.h.t==="T3"&&state.third[id+"H"])H={c:state.third[id+"H"]};
+  if(m.a.t==="T3"&&state.third[id+"A"])A={c:state.third[id+"A"]};
+  if(SIM){
+    const al=simThirds();
+    if(m.h.t==="T3"&&!H&&al[id])H={c:al[id],sim:true};
+    if(m.a.t==="T3"&&!A&&al[id])A={c:al[id],sim:true};
+  }
+  return {H,A};
+}
+function koWinner(id){
+  const r=state.res["k"+id]; if(!r)return null;
+  if(r.adv)return r.adv;
+  if(r.h!=null&&r.a!=null&&r.h!==r.a){const {H,A}=koSides(id);return r.h>r.a?(H&&H.c):(A&&A.c)}
+  return null;
+}
+function koLoser(id){
+  const w=koWinner(id); if(!w)return null;
+  const {H,A}=koSides(id);
+  if(!H||!A)return null;
+  return w===H.c?A.c:H.c;
+}
+
+/* ============================ RENDER: GRUPOS ============================ */
+function renderGroups(){
+  const box=$("#groupsGrid");box.innerHTML="";
+  for(const g in GROUPS){
+    const t=groupTable(g), done=groupComplete(g);
+    const qs=groupStatus(g)||{};
+    const ms=GM.filter(m=>m[1]===g);
+    const card=document.createElement("div");card.className="gcard";
+    card.innerHTML=`
+      <div class="gh">
+        <div class="gl">${g}</div>
+        <div class="gt">Grupo ${g}</div>
+        <div class="gd">${done?"Encerrado":"Em disputa"}</div>
+        <button class="shbtn" data-sh="${g}" title="Compartilhar tabela">📤</button>
+      </div>
+      <table class="stand"><thead><tr>
+        <th></th><th class="tl">Seleção</th><th>J</th><th>V</th><th>E</th><th>D</th><th>SG</th><th>Pts</th>
+      </tr></thead><tbody>
+      ${t.map(r=>`<tr class="q${r.pos<=2?r.pos:(r.pos===3?3:4)} ${isFav(r.c)?'favr':''}">
+        <td class="pos"><span class="n">${r.pos}</span></td>
+        <td class="tm"><div class="team-c">${flagImg(r.c)}<span>${tn(r.c)}</span>${isFav(r.c)?'<span class="favstar">★</span>':''}${qBadge(qs[r.c])}</div></td>
+        <td>${r.P}</td><td>${r.W}</td><td>${r.D}</td><td>${r.L}</td>
+        <td>${r.GD>0?"+":""}${r.GD}</td><td class="pts">${r.PT}</td>
+      </tr>`).join("")}
+      </tbody></table>
+      <div class="gmatches">
+        <button class="gmt" data-g="${g}"><span>Ver ${ms.length} jogos do grupo</span><span class="chev">▾</span></button>
+        <div class="gmlist" id="gml-${g}">
+          ${ms.map(m=>matchRow(m)).join("")}
+        </div>
+      </div>`;
+    box.appendChild(card);
+  }
+  box.querySelectorAll(".gmt").forEach(b=>b.onclick=()=>{
+    b.classList.toggle("open");$("#gml-"+b.dataset.g).classList.toggle("open");
+  });
+  box.querySelectorAll(".shbtn").forEach(b=>b.onclick=e=>{e.stopPropagation();shareGroup(b.dataset.sh)});
+  bindMatchRows(box);
+}
+function matchRow(m){
+  const [id,,iso,h,a]=m, sp=spParts(iso), r=state.res[id], st=statusOf(id,iso);
+  const played=r&&r.h!=null&&r.a!=null;
+  const lv=!played&&LIVE[id];
+  const hw=played&&r.h>r.a, aw=played&&r.a>r.h;
+  const hs=played?r.h:(lv?lv.h:"–"), as=played?r.a:(lv?lv.a:"–");
+  const scCls=played||lv?"":"e";
+  const tag=st==="fim"?`<span class="tag fim">Fim</span>`
+    :st==="viv"?`<span class="tag viv">● ${lv&&lv.clock?lv.clock:"Ao vivo"}</span>`
+    :`<span class="tag age">${sp.time}</span>`;
+  return `<button class="mrow ${(isFav(h)||isFav(a))?'favm':''}" data-id="${id}">
+    <div class="time"><div class="t">${sp.time}</div><div class="d">${sp.dow} ${sp.date}</div></div>
+    <div class="ms">
+      <div class="mside ${hw?'win':aw?'lose':''}">${flagImg(h)}<span class="nm">${tn(h)}</span><span class="sc ${scCls}">${hs}</span></div>
+      <div class="mside ${aw?'win':hw?'lose':''}">${flagImg(a)}<span class="nm">${tn(a)}</span><span class="sc ${scCls}">${as}</span></div>
+    </div>
+    <div class="mstat">${tag}</div>
+  </button>`;
+}
+function bindMatchRows(scope){
+  scope.querySelectorAll(".mrow").forEach(b=>b.onclick=()=>openEditor(b.dataset.id));
+}
+
+/* ============================ RENDER: JOGOS ============================ */
+let activeDay=null;
+function allDaysGroup(){
+  const days={};
+  GM.forEach(m=>{const k=spParts(m[2]).key;(days[k]=days[k]||[]).push(m)});
+  return days;
+}
+function renderJogos(){
+  const days=allDaysGroup();
+  const keys=Object.keys(days).sort();
+  if(!activeDay||!days[activeDay]){
+    // dia padrão = próximo dia com jogo a partir de hoje, senão o primeiro
+    const todayKey=spParts(new Date().toISOString()).key;
+    activeDay=keys.find(k=>k>=todayKey)||keys[0];
+  }
+  const sel=$("#daysel");sel.innerHTML="";
+  keys.forEach(k=>{
+    const sp=spParts(days[k][0][2]);
+    const c=document.createElement("button");c.className="dchip"+(k===activeDay?" on":"");
+    c.innerHTML=`<div class="dn">${sp.dow}</div><div class="dd">${sp.dd}/${sp.mm}</div>`;
+    c.onclick=()=>{activeDay=k;renderJogos();$("#daysel").scrollLeft=c.offsetLeft-100};
+    sel.appendChild(c);
+  });
+  const list=$("#jogosList");
+  const ms=days[activeDay].slice().sort((x,y)=>new Date(x[2])-new Date(y[2]));
+  const sp0=spParts(ms[0][2]);
+  list.innerHTML=`<div class="dayhd">${sp0.dow} · ${sp0.dd}/${sp0.mm}</div>`+
+    ms.map(m=>jogoRow(m)).join("");
+  bindMatchRows(list);
+}
+function jogoRow(m){
+  const [id,g,iso,h,a]=m, sp=spParts(iso), r=state.res[id], st=statusOf(id,iso);
+  const played=r&&r.h!=null&&r.a!=null;
+  const lv=!played&&LIVE[id];
+  const hw=played&&r.h>r.a, aw=played&&r.a>r.h;
+  const hs=played?r.h:(lv?lv.h:"–"), as=played?r.a:(lv?lv.a:"–");
+  const scCls=played||lv?"":"e";
+  const tag=st==="fim"?`<span class="tag fim">Fim</span>`
+    :st==="viv"?`<span class="tag viv">● ${lv&&lv.clock?lv.clock:"Ao vivo"}</span>`
+    :`<span class="tag age">${sp.time}</span>`;
+  return `<button class="jrow mrow ${(isFav(h)||isFav(a))?'favm':''}" data-id="${id}">
+    <div class="gtag"><b>Grupo</b><span class="gg">${g}</span></div>
+    <div class="jmid">
+      <div class="mside ${hw?'win':aw?'lose':''}">${flagImg(h)}<span class="nm">${tn(h)}</span><span class="sc ${scCls}">${hs}</span></div>
+      <div class="mside ${aw?'win':hw?'lose':''}">${flagImg(a)}<span class="nm">${tn(a)}</span><span class="sc ${scCls}">${as}</span></div>
+      <div class="venue">${m[5]} · ${m[6]}</div>
+    </div>
+    <div class="jt"><div class="t">${sp.time}</div>${tag}</div>
+  </button>`;
+}
+
+/* ============================ RENDER: MATA-MATA ============================ */
+function renderMata(){
+  const allDone=Object.keys(GROUPS).every(g=>groupComplete(g));
+  const anyStarted=GM.some(m=>{const r=state.res[m[0]];return r&&r.h!=null&&r.a!=null});
+  const sb=$("#simbar");
+  if(allDone||!anyStarted){sb.innerHTML="";simOn=false;}
+  else sb.innerHTML=`<button class="simtog ${simOn?'on':''}" id="simTog">${simOn?'✓ Projeção ativa':'🔮 Projetar com classificação atual'}</button>`+
+    (simOn?`<span class="simhint">times em <i>itálico</i> = projeção ("se terminasse hoje") · edição pausada</span>`:
+           `<span class="simhint">veja quem estaria no mata-mata se a fase de grupos terminasse agora</span>`);
+  SIM=simOn&&!allDone; simThirdsCache=null;
+  const br=$("#bracket");br.innerHTML="";
+  br.classList.toggle("simmode",SIM);
+  const cols=[["R32",[73,74,76,75,78,77,79,80,82,81,84,83,88,86,85,87]],
+             ["R16",[89,90,91,92,93,94,95,96]],
+             ["QF",[97,98,99,100]],
+             ["SF",[101,102]],
+             ["FIN",[104,103]]];
+  cols.forEach(([rk,ids])=>{
+    const col=document.createElement("div");col.className="rnd"+(rk==="R32"?" r32":"");
+    col.innerHTML=`<div class="rnd-h">${ROUND_NAMES[rk]}</div>`;
+    ids.forEach(id=>col.insertAdjacentHTML("beforeend",koCard(id)));
+    br.appendChild(col);
+  });
+  // campeão
+  const champCol=document.createElement("div");champCol.className="rnd";
+  champCol.innerHTML=`<div class="rnd-h">Campeão</div>`+champCard();
+  br.appendChild(champCol);
+  const simNow=SIM;
+  br.querySelectorAll(".kmatch[data-k]").forEach(b=>b.onclick=simNow
+    ?()=>toast("🔮 Projeção ativa — desative para editar resultados")
+    :()=>openKoEditor(+b.dataset.k));
+  SIM=false;
+  const st=$("#simTog");if(st)st.onclick=()=>{simOn=!simOn;renderMata()};
+  renderThirds();
+}
+function slotLabel(slot){
+  if(slot.t==="W")return "1º Grupo "+slot.g;
+  if(slot.t==="R")return "2º Grupo "+slot.g;
+  if(slot.t==="T3")return "Melhor 3º · "+slot.g.join("/");
+  if(slot.t==="WIN")return "Vencedor J"+slot.k;
+  if(slot.t==="LOS")return "Perdedor J"+slot.k;
+  return "";
+}
+function koSideHTML(id,slot,which){
+  const {H,A}=koSides(id), team=which==="H"?H:A;
+  const w=koWinner(id), played=state.res["k"+id];
+  if(team){
+    const isW=!team.sim&&w===team.c, isL=!team.sim&&played&&w&&w!==team.c;
+    const r=state.res["k"+id]; let sc="";
+    if(!team.sim&&r&&r.h!=null&&r.a!=null)sc=`<span class="ks">${which==="H"?r.h:r.a}</span>`;
+    return `<div class="kside ${isW?'win':''} ${isL?'lose':''} ${team.sim?'simgh':''}">${flagImg(team.c)}<span class="nm">${tn(team.c)}</span>${sc}</div>`;
+  }
+  return `<div class="kside"><span class="flagph">?</span><span class="nm ph">${slotLabel(slot)}</span></div>`;
+}
+function koCard(id){
+  const m=KO[id], sp=spParts(m.d);
+  const isFinal=m.r==="FIN", is3=m.r==="3L";
+  return `<button class="kmatch ${isFinal?'final-card':''}" data-k="${id}">
+    <div class="kid"><span>Jogo ${id}</span><span class="kt">${isFinal?'🏆 Final':is3?'3º lugar':ROUND_NAMES[m.r]}</span></div>
+    ${koSideHTML(id,m.h,"H")}
+    ${koSideHTML(id,m.a,"A")}
+    <div class="kfoot"><span>${sp.dow} ${sp.date} · ${sp.time}</span><span>${m.c}</span></div>
+  </button>`;
+}
+function champCard(){
+  const w=koWinner(104);
+  if(w)return `<div class="champ"><div class="ti">★ Campeão Mundial</div>${flagImg(w)}<div class="nm">${tn(w)}</div></div>`;
+  return `<div class="champ"><div class="ti">★ Campeão Mundial</div><span class="flagph" style="width:60px;height:44px;border-radius:6px">?</span><div class="ph">a definir</div></div>`;
+}
+function renderThirds(){
+  const box=$("#thirdsBox"); const r=thirdsRanking();
+  const anyDone=r.some(x=>x.done);
+  box.innerHTML=`<div class="th-h">🥉 Ranking dos 3º colocados <span class="gl">8 melhores avançam</span></div>
+  <table class="stand"><thead><tr><th></th><th class="tl">Seleção</th><th>Grp</th><th>Pts</th><th>SG</th><th>GP</th></tr></thead>
+  <tbody>${r.map(x=>`<tr class="${x.rank<=8?'q1':''}">
+    <td class="pos"><span class="n">${x.rank}</span></td>
+    <td class="tm"><div class="team-c">${flagImg(x.c)}<span>${tn(x.c)}</span></div></td>
+    <td style="color:var(--blu);font-weight:800">${x.g}</td>
+    <td class="pts">${anyDone?x.PT:'–'}</td><td>${anyDone?(x.GD>0?'+':'')+x.GD:'–'}</td><td>${anyDone?x.GF:'–'}</td>
+  </tr>`).join("")}</tbody></table>`;
+}
+
+/* ============================ EDITOR (modal) ============================ */
+let edData=null;
+function openEditor(id){
+  const m=GM.find(x=>x[0]===id); if(!m)return;
+  const [,g,iso,h,a]=m, sp=spParts(iso), r=state.res[id]||{};
+  edData={kind:"group",id,h,a};
+  const mod=$("#modal");
+  mod.innerHTML=`<div class="grab"></div>
+    <div class="m-stage">Grupo ${g}</div>
+    <div class="m-meta">${sp.dow}, ${sp.date} · <b>${sp.time}</b> · ${m[5]}, ${m[6]}</div>
+    <div style="height:14px"></div>
+    ${edSide(h,r.h)}
+    ${edSide(a,r.a)}
+    <div class="m-actions">
+      <button class="m-clear" id="edClear">Limpar</button>
+      <button class="m-save" id="edSave">Salvar placar</button>
+    </div>`;
+  wireSteppers();
+  $("#edSave").onclick=()=>{
+    const hv=getStep(0),av=getStep(1);
+    state.res[id]={h:hv,a:av};save();closeOv();refresh();toast(`${tn(h)} ${hv} × ${av} ${tn(a)}`);
+  };
+  $("#edClear").onclick=()=>{delete state.res[id];save();closeOv();refresh();toast("Placar removido")};
+  $("#ov").classList.add("on");
+}
+function edSide(c,val){
+  return `<div class="ed">
+    <div class="et">${flagImg(c)}<span class="nm">${tn(c)}</span></div>
+    <div class="step"><button data-d="-1">–</button><span class="sv">${val!=null?val:0}</span><button data-d="1">+</button></div>
+  </div>`;
+}
+function wireSteppers(){
+  $("#modal").querySelectorAll(".step").forEach(st=>{
+    const sv=st.querySelector(".sv");
+    st.querySelectorAll("button").forEach(b=>b.onclick=()=>{
+      let v=parseInt(sv.textContent)||0;v=Math.max(0,Math.min(30,v+(+b.dataset.d)));sv.textContent=v;
+    });
+  });
+}
+function getStep(i){return parseInt($("#modal").querySelectorAll(".sv")[i].textContent)||0}
+
+function openKoEditor(id){
+  const m=KO[id], sp=spParts(m.d), r=state.res["k"+id]||{};
+  let {H,A}=koSides(id);
+  edData={kind:"ko",id};
+  const mod=$("#modal");
+  // selects para vagas de 3º não definidas
+  const selH=(m.h.t==="T3"&&!H)?t3Select(id,"H",m.h.g):"";
+  const selA=(m.a.t==="T3"&&!A)?t3Select(id,"A",m.a.g):"";
+  ({H,A}=koSides(id));
+  const hName=H?tn(H.c):slotLabel(m.h), aName=A?tn(A.c):slotLabel(m.a);
+  mod.innerHTML=`<div class="grab"></div>
+    <div class="m-stage">${m.r==="FIN"?"🏆 Final":m.r==="3L"?"Disputa de 3º lugar":ROUND_NAMES[m.r]} · Jogo ${id}</div>
+    <div class="m-meta">${sp.dow}, ${sp.date} · <b>${sp.time}</b> · ${m.v}, ${m.c}</div>
+    <div style="height:14px"></div>
+    ${selH}
+    ${edSideKo(H,m.h,r.h)}
+    ${selA}
+    ${edSideKo(A,m.a,r.a)}
+    ${(H&&A)?advBlock(id,H,A,r):''}
+    <div class="m-actions">
+      <button class="m-clear" id="edClear">Limpar</button>
+      <button class="m-save" id="edSave">Salvar</button>
+    </div>`;
+  wireSteppers();wireAdv();wireT3(id);
+  $("#edSave").onclick=()=>{
+    const {H,A}=koSides(id);
+    const obj={};
+    const sv=$("#modal").querySelectorAll(".sv");
+    if(sv.length>=2){obj.h=parseInt(sv[0].textContent)||0;obj.a=parseInt(sv[1].textContent)||0;}
+    const advSel=$("#modal").querySelector(".adv .opt.on");
+    if(advSel)obj.adv=advSel.dataset.c;
+    // se empate sem escolha de avanço, exige
+    if(H&&A&&obj.h===obj.a&&!obj.adv){toast("Empate: escolha quem avançou (pênaltis)");return;}
+    if(H&&A&&obj.h!==obj.a)delete obj.adv; // vencedor claro
+    state.res["k"+id]=obj;save();closeOv();refresh();
+    const w=koWinner(id);toast(w?`Avança: ${tn(w)}`:"Salvo");
+  };
+  $("#edClear").onclick=()=>{delete state.res["k"+id];delete state.third[id+"H"];delete state.third[id+"A"];save();closeOv();refresh();toast("Jogo limpo")};
+  $("#ov").classList.add("on");
+}
+function edSideKo(team,slot,val){
+  const inner=team?`${flagImg(team.c)}<span class="nm">${tn(team.c)}</span>`
+                  :`<span class="flagph">?</span><span class="nm" style="color:var(--mut2)">${slotLabel(slot)}</span>`;
+  return `<div class="ed"><div class="et">${inner}</div>
+    <div class="step"><button data-d="-1">–</button><span class="sv">${val!=null?val:0}</span><button data-d="1">+</button></div></div>`;
+}
+function advBlock(id,H,A,r){
+  return `<div class="adv"><div class="lab">Quem avançou (caso empate / pênaltis)</div>
+   <div class="opts">
+     <button class="opt ${r.adv===H.c?'on':''}" data-c="${H.c}">${flagImg(H.c)} ${tn(H.c)}</button>
+     <button class="opt ${r.adv===A.c?'on':''}" data-c="${A.c}">${flagImg(A.c)} ${tn(A.c)}</button>
+   </div></div>`;
+}
+function wireAdv(){
+  $("#modal").querySelectorAll(".adv .opt").forEach(o=>o.onclick=()=>{
+    const on=o.classList.contains("on");
+    $("#modal").querySelectorAll(".adv .opt").forEach(x=>x.classList.remove("on"));
+    if(!on)o.classList.add("on");
+  });
+}
+function t3Select(id,which,groups){
+  const r=thirdsRanking().filter(x=>x.rank<=8&&groups.includes(x.g));
+  const opts=r.map(x=>`<option value="${x.c}">${tn(x.c)} (Grp ${x.g})</option>`).join("");
+  return `<div class="m-sel"><label>Definir melhor 3º (grupos ${groups.join("/")})</label>
+    <select data-t3="${which}" data-id="${id}"><option value="">— selecionar —</option>${opts}</select></div>`;
+}
+function wireT3(id){
+  $("#modal").querySelectorAll("select[data-t3]").forEach(s=>s.onchange=()=>{
+    const key=id+s.dataset.t3;
+    if(s.value)state.third[key]=s.value;else delete state.third[key];
+    save();openKoEditor(id); // re-render para mostrar bandeira
+  });
+}
+function closeOv(){$("#ov").classList.remove("on")}
+$("#ov").onclick=e=>{if(e.target.id==="ov")closeOv()};
+
+/* ============================ HERO ============================ */
+let heroTimer=null;
+function renderHero(){
+  // próximo jogo (grupo+mata) sem placar a partir de agora; senão último ao vivo
+  const now=Date.now();
+  const all=[...GM.map(m=>({id:m[0],iso:m[2],h:m[3],a:m[4],ko:false})),
+             ...Object.keys(KO).map(k=>{const s=koSides(+k);return{id:"k"+k,iso:KO[k].d,h:s.H&&s.H.c,a:s.A&&s.A.c,ko:true,m:KO[k]}})];
+  // ao vivo?
+  let live=all.find(x=>{const ko=new Date(x.iso).getTime();const r=stateRes(x);return now>=ko&&now<ko+115*60000&&!(r&&(r.h!=null&&r.a!=null))});
+  let nxt=all.filter(x=>new Date(x.iso).getTime()>now).sort((p,q)=>new Date(p.iso)-new Date(q.iso))[0];
+  const target=live||nxt;
+  const hero=$("#hero");
+  if(!target){hero.innerHTML=`<div class="hero-in"><div class="hero-lab">Copa encerrada</div></div>`;return;}
+  const sp=spParts(target.iso);
+  const hN=target.h?tn(target.h):"A definir", aN=target.a?tn(target.a):"A definir";
+  const hF=target.h?flagImg(target.h):`<div style="width:60px;height:44px;border-radius:7px;background:var(--surf3);display:grid;place-items:center;color:var(--mut2);font-weight:800">?</div>`;
+  const aF=target.a?flagImg(target.a):`<div style="width:60px;height:44px;border-radius:7px;background:var(--surf3);display:grid;place-items:center;color:var(--mut2);font-weight:800">?</div>`;
+  const lab=live?`<span class="live-pill"><span class="dot"></span> Ao vivo agora</span>`:`<span class="hero-lab">⚽ Próximo jogo</span>`;
+  const stage=target.ko?(KO[+target.id.slice(1)].r==="FIN"?"Final":ROUND_NAMES[KO[+target.id.slice(1)].r]):"Fase de grupos";
+  const lv=live&&LIVE[target.id];
+  const mid=lv?`<div class="hx hsc">${lv.h}×${lv.a}</div>`:`<div class="hx">×</div>`;
+  // próximo jogo de uma seleção seguida (se diferente do destaque)
+  let favLine="";
+  if(state.fav&&state.fav.length){
+    const fnext=all.filter(x=>x.h&&x.a&&(isFav(x.h)||isFav(x.a))&&new Date(x.iso).getTime()>now)
+      .sort((p,q)=>new Date(p.iso)-new Date(q.iso))[0];
+    if(fnext&&fnext.id!==target.id){
+      const fsp=spParts(fnext.iso), fc=isFav(fnext.h)?fnext.h:fnext.a;
+      favLine=`<div class="meta" style="margin-top:6px">⭐ <b>${tn(fc)}</b> joga ${fsp.dow} ${fsp.date} · ${fsp.time}</div>`;
+    }
+  }
+  hero.innerHTML=`<div class="hero-in">
+    <div>
+      ${live?lab:`<div class="hero-lab">⚽ Próximo jogo · ${stage}</div>`}
+      <div class="hmatch">
+        <div class="hteam">${hF}<span>${hN}</span></div>
+        ${mid}
+        <div class="hteam">${aF}<span>${aN}</span></div>
+      </div>
+    </div>
+    <div class="hcount">
+      <div class="cd" id="cd">--:--:--</div>
+      <div class="meta"><b>${sp.dow}, ${sp.date}</b> · ${sp.time} (Brasília) <button class="shbtn" id="heroSh" title="Compartilhar">📤</button></div>
+      ${favLine}
+    </div>
+  </div>`;
+  const hsBtn=$("#heroSh");if(hsBtn)hsBtn.onclick=()=>shareNext(target);
+  if(heroTimer)clearInterval(heroTimer);
+  const tk=new Date(target.iso).getTime();
+  const upd=()=>{
+    const diff=tk-Date.now();const el=$("#cd");if(!el)return;
+    if(diff<=0){
+      const l2=LIVE[target.id];
+      el.textContent=live?(l2&&l2.clock?l2.clock:"em jogo"):"começando";return}
+    const d=Math.floor(diff/864e5),h=Math.floor(diff%864e5/36e5),mi=Math.floor(diff%36e5/6e4),s=Math.floor(diff%6e4/1e3);
+    el.textContent=d>0?`${d}d ${String(h).padStart(2,"0")}h`:`${String(h).padStart(2,"0")}:${String(mi).padStart(2,"0")}:${String(s).padStart(2,"0")}`;
+  };
+  upd();heroTimer=setInterval(upd,1000);
+}
+function stateRes(x){return x.ko?state.res[x.id]:state.res[x.id]}
+
+/* ============================ NAV ============================ */
+$("#tabs").onclick=e=>{const b=e.target.closest(".tab");if(!b)return;
+  document.querySelectorAll(".tab").forEach(t=>t.classList.remove("on"));b.classList.add("on");
+  document.querySelectorAll(".view").forEach(v=>v.classList.remove("on"));
+  $("#v-"+b.dataset.v).classList.add("on");
+  if(b.dataset.v==="jogos")renderJogos();if(b.dataset.v==="mata")renderMata();
+};
+function refresh(){simThirdsCache=null;renderGroups();renderHero();
+  if($("#v-jogos").classList.contains("on"))renderJogos();
+  if($("#v-mata").classList.contains("on"))renderMata();
+}
+
+/* ============================ TOAST ============================ */
+let tt=null;
+function toast(m){const e=$("#toast");e.textContent=m;e.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>e.classList.remove("on"),2600)}
+
+/* ============================ FEED AUTOMÁTICO ============================ */
+/* Fonte primária: API pública (não-oficial) da ESPN para a Copa do Mundo FIFA.
+   Endpoint (CORS liberado, sem chave):
+     https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=YYYYMMDD-YYYYMMDD
+   Fallback: busca via IA (web_search) — funciona quando o arquivo roda dentro do Claude. */
+const ESPN_BASE="https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard";
+const WC_START="20260611", WC_END="20260720";
+const TOURN_FROM=new Date("2026-06-11T00:00:00-04:00").getTime();
+const TOURN_TO  =new Date("2026-07-20T06:00:00-04:00").getTime();
+
+/* --- normalização + dicionário de nomes -> código interno --- */
+const ALIAS={};
+function norm(s){return (s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9 ]/g,"").trim()}
+Object.keys(T).forEach(c=>{ALIAS[norm(T[c][0])]=c});            // nomes PT
+Object.keys(T).forEach(c=>{ALIAS[norm(c)]=c});                  // o próprio código (sigla FIFA)
+// nomes/variantes em inglês usados pela ESPN
+[["mexico","MEX"],["south africa","RSA"],["south korea","KOR"],["korea republic","KOR"],["korea south","KOR"],
+ ["czechia","CZE"],["czech republic","CZE"],["canada","CAN"],["bosnia and herzegovina","BIH"],["bosnia herzegovina","BIH"],["bosnia","BIH"],
+ ["qatar","QAT"],["switzerland","SUI"],["brazil","BRA"],["morocco","MAR"],["haiti","HAI"],["scotland","SCO"],
+ ["united states","USA"],["usa","USA"],["united states of america","USA"],["paraguay","PAR"],["australia","AUS"],
+ ["turkey","TUR"],["turkiye","TUR"],["turkey turkiye","TUR"],["germany","GER"],["curacao","CUW"],
+ ["ivory coast","CIV"],["cote divoire","CIV"],["côte divoire","CIV"],["ecuador","ECU"],["netherlands","NED"],["holland","NED"],
+ ["japan","JPN"],["sweden","SWE"],["tunisia","TUN"],["belgium","BEL"],["egypt","EGY"],["iran","IRN"],["ir iran","IRN"],
+ ["new zealand","NZL"],["spain","ESP"],["cape verde","CPV"],["cabo verde","CPV"],["cape verde islands","CPV"],
+ ["saudi arabia","KSA"],["uruguay","URU"],["france","FRA"],["senegal","SEN"],["iraq","IRQ"],["norway","NOR"],
+ ["argentina","ARG"],["algeria","ALG"],["austria","AUT"],["jordan","JOR"],["portugal","POR"],
+ ["dr congo","COD"],["congo dr","COD"],["democratic republic of congo","COD"],["dr congo cod","COD"],
+ ["uzbekistan","UZB"],["colombia","COL"],["england","ENG"],["croatia","CRO"],["ghana","GHA"],["panama","PAN"]
+].forEach(([n,c])=>ALIAS[norm(n)]=c);
+
+/* resolve um "competitor" da ESPN para o código interno */
+function espnTeamCode(comp){
+  const t=comp.team||{};
+  const ab=(t.abbreviation||"").toUpperCase();
+  if(ab&&T[ab])return ab;                                    // sigla FIFA bate direto
+  const tries=[t.displayName,t.name,t.shortDisplayName,t.location,t.abbreviation];
+  for(const nm of tries){const c=ALIAS[norm(nm)];if(c)return c}
+  return null;
+}
+
+/* aplica um resultado encerrado (grupos OU mata-mata). Retorna true se algo mudou. */
+function applyResult(hc,ac,hg,ag,winnerCode,iso){
+  if(!hc||!ac)return false;
+  hg=+hg; ag=+ag; if(!Number.isFinite(hg)||!Number.isFinite(ag))return false;
+
+  // 1) Fase de grupos — casa o par de times no calendário GM
+  const gm=GM.find(m=>(m[3]===hc&&m[4]===ac)||(m[3]===ac&&m[4]===hc));
+  if(gm){
+    const swap=gm[3]!==hc;
+    const nh=swap?ag:hg, na=swap?hg:ag;
+    const cur=state.res[gm[0]];
+    if(cur&&cur.h===nh&&cur.a===na)return false;            // já estava igual
+    state.res[gm[0]]={h:nh,a:na};
+    return true;
+  }
+
+  // 2) Mata-mata — encontra o confronto KO cujos lados já resolvidos batem com este par
+  const t=iso?new Date(iso).getTime():null;
+  for(const k in KO){
+    const {H,A}=koSides(+k);
+    if(!H||!A)continue;
+    const set=new Set([H.c,A.c]);
+    if(!(set.has(hc)&&set.has(ac)))continue;
+    if(t){const kt=new Date(KO[k].d).getTime();if(Math.abs(kt-t)>3*864e5)continue} // guarda de data (±3d)
+    const hIsH=(H.c===hc);                                    // orienta placar p/ lado H do app
+    const nh=hIsH?hg:ag, na=hIsH?ag:hg;
+    const rec={h:nh,a:na};
+    if(nh===na){                                              // empate no tempo normal/prorrogação => pênaltis
+      const advC=winnerCode;                                  // usa vencedor sinalizado pela ESPN
+      if(advC&&(advC===H.c||advC===A.c))rec.adv=advC;
+    }
+    const cur=state.res["k"+k];
+    if(cur&&cur.h===rec.h&&cur.a===rec.a&&cur.adv===rec.adv)return false;
+    state.res["k"+k]=rec;
+    return true;
+  }
+  return false;
+}
+
+/* localiza o id interno (grupo ou KO) de um par de seleções — usado para placares ao vivo */
+function liveLocate(hc,ac){
+  const gm=GM.find(m=>(m[3]===hc&&m[4]===ac)||(m[3]===ac&&m[4]===hc));
+  if(gm)return{id:gm[0],swap:gm[3]!==hc};
+  for(const k in KO){
+    const {H,A}=koSides(+k); if(!H||!A)continue;
+    if((H.c===hc&&A.c===ac)||(H.c===ac&&A.c===hc))return{id:"k"+k,swap:H.c!==hc};
+  }
+  return null;
+}
+
+/* baixa um intervalo de datas da ESPN e aplica encerrados + placares ao vivo */
+async function espnRange(dateParam){
+  const url=`${ESPN_BASE}?dates=${dateParam}&limit=400`;
+  const resp=await fetch(url,{cache:"no-store"});
+  if(!resp.ok)throw new Error("ESPN http "+resp.status);
+  const data=await resp.json();
+  let changed=0;
+  (data.events||[]).forEach(ev=>{
+    const comp=(ev.competitions&&ev.competitions[0])||null; if(!comp)return;
+    const st=comp.status&&comp.status.type||{};
+    const cs=comp.competitors||[];
+    const home=cs.find(c=>c.homeAway==="home")||cs[0];
+    const away=cs.find(c=>c.homeAway==="away")||cs[1];
+    if(!home||!away)return;
+    const hc=espnTeamCode(home),ac=espnTeamCode(away);
+    if(!hc||!ac)return;
+    const done=st.completed===true||st.state==="post";
+    if(done){
+      const winner=home.winner?hc:(away.winner?ac:null);
+      if(applyResult(hc,ac,home.score,away.score,winner,ev.date)){
+        changed++;
+        const loc=liveLocate(hc,ac);
+        if(loc&&LIVE[loc.id]){delete LIVE[loc.id];liveDirty=true;}
+        if(isFav(hc)||isFav(ac))notify("✅ Fim de jogo — Copa 2026",`${tn(hc)} ${home.score} × ${away.score} ${tn(ac)}`);
+      }
+      return;
+    }
+    if(st.state==="in"){
+      const loc=liveLocate(hc,ac); if(!loc)return;
+      const nh=loc.swap?+away.score:+home.score, na=loc.swap?+home.score:+away.score;
+      if(!Number.isFinite(nh)||!Number.isFinite(na))return;
+      const clock=(comp.status&&comp.status.displayClock)||"";
+      const prev=LIVE[loc.id];
+      LIVE[loc.id]={h:nh,a:na,clock};
+      if(!prev||prev.h!==nh||prev.a!==na||prev.clock!==clock)liveDirty=true;
+      if(prev&&(prev.h!==nh||prev.a!==na)&&(isFav(hc)||isFav(ac)))
+        notify("⚽ GOL — Copa 2026",`${tn(hc)} ${home.score} × ${away.score} ${tn(ac)}${clock?" · "+clock:""}`);
+    }
+  });
+  return changed;
+}
+
+/* varredura completa do torneio (em blocos, p/ não estourar o limite por requisição) */
+async function espnFullSync(){
+  const chunks=["20260611-20260620","20260621-20260630","20260701-20260710",`20260711-${WC_END}`];
+  let total=0;
+  for(const ch of chunks){ total+=await espnRange(ch); }
+  return total;
+}
+
+/* --- indicador de sincronização no header --- */
+function setSync(stateStr,text){
+  const dot=$("#syncDot"),lbl=$("#syncLbl");
+  if(!dot||!lbl)return;
+  lbl.textContent=text;
+  dot.style.background= stateStr==="err"?"var(--coral)": stateStr==="busy"?"var(--gold)":"var(--grn)";
+  dot.style.boxShadow= stateStr==="err"?"0 0 0 4px rgba(255,92,122,.18)":
+                       stateStr==="busy"?"0 0 0 4px rgba(255,200,69,.18)":"0 0 0 4px rgba(38,230,138,.18)";
+}
+function hhmm(){const d=new Date();return String(d.getHours()).padStart(2,"0")+":"+String(d.getMinutes()).padStart(2,"0")}
+
+/* --- fallback via IA (web_search) — só roda se a ESPN falhar e a API do Claude existir --- */
+async function aiFallback(){
+  const prompt=`Busque na web os RESULTADOS já encerrados da Copa do Mundo FIFA 2026 (11/06 a 19/07/2026). `+
+    `Responda APENAS com JSON válido, sem texto/markdown. Formato: `+
+    `{"matches":[{"home":"<time mandante em inglês>","away":"<visitante em inglês>","date":"YYYY-MM-DD","hg":<gols>,"ag":<gols>}]}. `+
+    `Apenas jogos com placar final. Se nenhum terminou, {"matches":[]}.`;
+  const resp=await fetch("https://api.anthropic.com/v1/messages",{
+    method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({model:"claude-sonnet-4-20250514",max_tokens:1500,
+      messages:[{role:"user",content:prompt}],tools:[{type:"web_search_20250305",name:"web_search"}]})
+  });
+  if(!resp.ok)throw new Error("ai http "+resp.status);
+  const data=await resp.json();
+  const txt=(data.content||[]).filter(b=>b.type==="text").map(b=>b.text).join("\n");
+  const j=txt.replace(/```json|```/g,"").trim();
+  const obj=JSON.parse(j.slice(j.indexOf("{"),j.lastIndexOf("}")+1));
+  let n=0;
+  (obj.matches||[]).forEach(mt=>{
+    if(applyResult(ALIAS[norm(mt.home)],ALIAS[norm(mt.away)],mt.hg,mt.ag,null,mt.date))n++;
+  });
+  return n;
+}
+
+/* --- orquestrador (botão ⚡ Atualizar) --- */
+let syncing=false;
+async function syncNow(silent){
+  if(syncing)return; syncing=true;
+  const btn=$("#iaBtn");const old=btn?btn.textContent:"";
+  if(btn){btn.disabled=true;btn.textContent="⏳ Atualizando...";}
+  setSync("busy","Sincronizando...");
+  let n=0,src="";
+  try{
+    n=await espnFullSync(); src="ESPN";
+  }catch(e){
+    try{ n=await aiFallback(); src="IA"; }
+    catch(e2){
+      setSync("err","Feed indisponível");
+      if(!silent)toast("Feed indisponível agora — toque nos jogos para editar manualmente");
+      if(btn){btn.disabled=false;btn.textContent=old;} syncing=false; return;
+    }
+  }
+  if(n>0){save();refresh();}
+  else if(liveDirty){renderHero();if($("#v-jogos").classList.contains("on"))renderJogos();}
+  liveDirty=false;
+  setSync("ok",`Atualizado ${hhmm()}`);
+  if(!silent)toast(n>0?`✅ ${n} resultado(s) atualizado(s) · ${src}`:"Nenhum jogo novo encerrado");
+  if(btn){btn.disabled=false;btn.textContent=old;} syncing=false;
+}
+
+/* --- polling leve durante o torneio: só o dia corrente, a cada 90s --- */
+async function livePoll(){
+  const now=Date.now();
+  if(now<TOURN_FROM||now>TOURN_TO)return;                    // fora da janela do torneio: não faz nada
+  try{
+    const d=new Date();
+    const dp=d.getUTCFullYear()+String(d.getUTCMonth()+1).padStart(2,"0")+String(d.getUTCDate()).padStart(2,"0");
+    // varre ontem+hoje+amanhã (UTC) p/ cobrir fusos
+    const y=new Date(now-864e5),tm=new Date(now+864e5);
+    const fmt=x=>x.getUTCFullYear()+String(x.getUTCMonth()+1).padStart(2,"0")+String(x.getUTCDate()).padStart(2,"0");
+    const n=await espnRange(`${fmt(y)}-${fmt(tm)}`);
+    if(n>0){save();refresh();setSync("ok",`Atualizado ${hhmm()}`);}
+    else if(liveDirty){renderHero();if($("#v-jogos").classList.contains("on"))renderJogos();setSync("ok",`Ao vivo ${hhmm()}`);}
+    liveDirty=false;
+  }catch(e){/* silencioso */}
+}
+
+$("#iaBtn").onclick=()=>syncNow(false);
+
+/* ============================ FAVORITOS (modal) ============================ */
+function openFavModal(){
+  const mod=$("#modal");
+  const codes=Object.keys(T).sort((a,b)=>tn(a).localeCompare(tn(b)));
+  mod.innerHTML=`<div class="grab"></div>
+    <div class="m-stage">⭐ Minhas seleções</div>
+    <div class="m-meta">Toque para seguir. Os jogos delas ganham destaque e você recebe aviso de <b>gol</b> e <b>resultado</b> quando o painel está aberto.</div>
+    <div class="favgrid">${codes.map(c=>`<button class="favchip ${isFav(c)?'on':''}" data-c="${c}">${flagImg(c)}<span>${tn(c)}</span></button>`).join("")}</div>
+    <div class="m-actions"><button class="m-save" id="favDone">Concluir</button></div>`;
+  mod.querySelectorAll(".favchip").forEach(b=>b.onclick=()=>{
+    const c=b.dataset.c;
+    if(isFav(c)){state.fav=state.fav.filter(x=>x!==c);b.classList.remove("on");}
+    else{state.fav.push(c);b.classList.add("on");askNotifPermission();}
+    save();
+  });
+  $("#favDone").onclick=()=>{closeOv();refresh()};
+  $("#ov").classList.add("on");
+}
+$("#favBtn").onclick=openFavModal;
+
+/* ============================ INIT ============================ */
+renderGroups();renderHero();
+setSync("ok","Resultados ao vivo");
+// backfill inicial silencioso + início do polling
+syncNow(true);
+setInterval(livePoll,90000);
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)livePoll()});
+</script>
+</body>
+</html>
