@@ -358,6 +358,11 @@ tr.favr{background:rgba(255,200,69,.05)}
 .bt.win{background:rgba(38,230,138,.13)}
 .bt.win .nm{font-weight:800;color:var(--grn)}
 .bt.lost{opacity:.4}
+.bt.locked{cursor:default}
+.bt.locked:hover{background:transparent}
+.bt.win.locked{background:rgba(38,230,138,.16)}
+.bm.bm-real{border-color:rgba(38,230,138,.32)}
+.bm-h .rtag{color:var(--grn);font-size:8px;font-weight:800;letter-spacing:.3px;text-transform:uppercase}
 .bt .pk{margin-left:auto;font-size:10px;color:var(--grn);flex:none;opacity:0;font-weight:800}
 .bt.win .pk{opacity:1}
 .bm.final-bm{border-color:rgba(255,200,69,.42);box-shadow:0 0 0 1px rgba(255,200,69,.14)}
@@ -431,7 +436,7 @@ tr.favr{background:rgba(255,200,69,.05)}
   <!-- CHAVE (bracket visual + simulador) -->
   <section class="view" id="v-chave">
     <div class="chv-note">🧪
-      <div><b>Simulador visual de chaveamento.</b> Toque num time para fazê-lo <b>vencer e avançar</b> — os cruzamentos se montam sozinhos até a final, e você enxerga os possíveis adversários de cada chave. É um cenário <b>"e se"</b>: não altera seus resultados salvos. Toque de novo no time escolhido para desfazer.</div>
+      <div><b>Simulador visual de chaveamento.</b> Parte dos <b>resultados reais</b> já confirmados (travados com 🔒) e projeta o resto: toque num time ainda em aberto para fazê-lo <b>vencer e avançar</b> — os cruzamentos se montam sozinhos até a final e você enxerga os possíveis adversários de cada chave. É um cenário <b>"e se"</b> e não altera seus resultados salvos. Toque de novo no time escolhido para desfazer.</div>
     </div>
     <div class="chv-tools">
       <button class="chv-btn primary" id="brkRand">🎲 Sortear</button>
@@ -1263,8 +1268,9 @@ const KO_KIDS=(()=>{const k={};for(const id in KO){const f=KO[id].feed||KO[id].f
 function loadBrk(){try{const s=JSON.parse(localStorage.getItem(BKEY));if(s&&s.pick)brkPick=s.pick;}catch(e){}}
 function saveBrk(){try{localStorage.setItem(BKEY,JSON.stringify({pick:brkPick}))}catch(e){}}
 
-// Resolução com overlay de simulação: vencedor escolhido > resultado real > indefinido.
-function ksWinner(id){return brkPick["k"+id]||koWinner(id)||null;}
+// Resolução: resultado REAL manda (trava a chave) > palpite simulado > indefinido.
+// Assim a simulação parte sempre dos jogos já decididos e só projeta o que falta.
+function ksWinner(id){return koWinner(id)||brkPick["k"+id]||null;}
 function ksLoser(id){const w=ksWinner(id);if(!w)return null;const s=ksSides(id);if(!s.H||!s.A)return null;return w===s.H?s.A:s.H;}
 function ksSides(id){
   const m=KO[id];
@@ -1275,9 +1281,10 @@ function ksSides(id){
 // Remove escolhas que deixaram de ser válidas (time não está mais naquela chave). Cascata em ordem de fase.
 function pruneBrk(){
   for(let pass=0;pass<2;pass++)for(const id of KO_ORDER){
+    if(koWinner(id)){delete brkPick["k"+id];continue;}     // resultado real chegou — palpite some, chave trava
     const p=brkPick["k"+id];if(!p)continue;
     const s=ksSides(id);
-    if(p!==s.H&&p!==s.A)delete brkPick["k"+id];
+    if(p!==s.H&&p!==s.A)delete brkPick["k"+id];             // time não está mais nesta chave
   }
 }
 function brkSetWinner(id,code){
@@ -1296,18 +1303,19 @@ function brkRandom(){
 }
 
 function bmSlotLabel(id,which){return slotLabel(KO[id][which==="H"?"h":"a"]);}
-function bmTeamRow(id,which,code,w){
+function bmTeamRow(id,which,code,w,real){
   if(!code)return `<div class="bt"><span class="flagph">?</span><span class="nm ph">${bmSlotLabel(id,which)}</span></div>`;
   const isW=w===code,isL=w&&w!==code;
-  return `<div class="bt ${isW?'win':''} ${isL?'lost':''}" data-k="${id}" data-c="${code}">`+
-         `${flagImg(code)}<span class="nm">${tn(code)}</span><span class="pk">✓</span></div>`;
+  const click=real?'':` data-k="${id}" data-c="${code}"`;            // travado quando há resultado real
+  return `<div class="bt ${isW?'win':''} ${isL?'lost':''} ${real?'locked':''}"${click}>`+
+         `${flagImg(code)}<span class="nm">${tn(code)}</span><span class="pk">${real?'🔒':'✓'}</span></div>`;
 }
 function bmBox(id){
-  const m=KO[id],{H,A}=ksSides(id),w=ksWinner(id);
+  const m=KO[id],{H,A}=ksSides(id),w=ksWinner(id),real=!!koWinner(id);
   const st=m.r==="FIN"?"Final":m.r==="3L"?"3º lugar":ROUND_NAMES[m.r];
-  return `<div class="bm ${m.r==="FIN"?'final-bm':''}" data-k="${id}">
-    <div class="bm-h"><span>Jogo ${id}</span><span class="st">${st}</span></div>
-    ${bmTeamRow(id,"H",H,w)}${bmTeamRow(id,"A",A,w)}</div>`;
+  return `<div class="bm ${m.r==="FIN"?'final-bm':''} ${real?'bm-real':''}" data-k="${id}">
+    <div class="bm-h"><span>Jogo ${id}</span>${real?'<span class="rtag">● resultado</span>':`<span class="st">${st}</span>`}</div>
+    ${bmTeamRow(id,"H",H,w,real)}${bmTeamRow(id,"A",A,w,real)}</div>`;
 }
 function brkChampBox(){
   const w=ksWinner(104);
