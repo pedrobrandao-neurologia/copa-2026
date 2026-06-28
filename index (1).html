@@ -315,6 +315,63 @@ tr.favr{background:rgba(255,200,69,.05)}
   .hcount{width:100%;text-align:left;margin-left:0}
   .hcount .meta{margin-top:6px}
 }
+/* ===== Aba Chave: bracket visual + simulador ===== */
+.chv-note{display:flex;gap:10px;align-items:flex-start;background:rgba(167,123,255,.07);border:1px solid rgba(167,123,255,.25);
+  border-radius:12px;padding:11px 13px;font-size:12px;color:var(--mut);margin-bottom:13px;line-height:1.5;font-size:18px}
+.chv-note>div{font-size:12.5px;align-self:center}
+.chv-note b{color:var(--tx)}
+.chv-tools{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:13px}
+.chv-btn{border:1px solid var(--line);background:var(--surf);border-radius:999px;padding:9px 14px;font-size:12.5px;font-weight:700;
+  color:var(--tx);transition:.12s;display:flex;align-items:center;gap:6px}
+.chv-btn:active{transform:scale(.96)}
+.chv-btn.primary{background:var(--grad);color:#06121f;border-color:transparent}
+.chv-btn.warn{color:var(--coral);border-color:rgba(255,92,122,.35);background:rgba(255,92,122,.06)}
+.chv-btn.ghost{border-color:transparent;background:transparent;color:var(--mut);padding:6px 8px}
+.chv-tools .grp{display:flex;align-items:center;gap:5px;background:var(--surf);border:1px solid var(--line);border-radius:999px;padding:4px;margin-left:auto}
+.zbtn{width:30px;height:30px;border-radius:8px;background:var(--surf2);color:var(--tx);font-size:17px;font-weight:800;display:grid;place-items:center;transition:.1s}
+.zbtn:active{background:var(--surf3)}
+.zlbl{font-size:11px;font-weight:800;color:var(--mut);min-width:42px;text-align:center}
+
+.brk-scroll{overflow:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:14px;padding:8px;
+  background:radial-gradient(circle at 1px 1px,rgba(255,255,255,.04) 1px,transparent 0) 0 0/22px 22px,var(--ink2);max-height:78vh}
+.brk-sizer{position:relative}
+.brk-zoom{transform-origin:top left}
+.brk{position:relative;display:flex;align-items:stretch;width:max-content;padding:8px}
+.brk-svg{position:absolute;top:0;left:0;pointer-events:none;z-index:0;overflow:visible}
+.brk-svg .cn{fill:none;stroke:var(--line2);stroke-width:1.6}
+.brk-svg .cn.won{stroke:var(--grn);stroke-width:2.2;opacity:.95}
+.brk-side{display:flex;align-items:stretch}
+.brk-col{display:flex;flex-direction:column;justify-content:space-around;position:relative;z-index:1;width:166px;padding:0 17px}
+.brk-center{display:flex;flex-direction:column;justify-content:center;align-items:center;width:176px;position:relative;z-index:1;gap:13px}
+
+.bm{background:var(--surf);border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:.12s;width:100%}
+.bm-h{display:flex;justify-content:space-between;align-items:center;padding:3px 8px;font-size:8.5px;font-weight:800;letter-spacing:.3px;
+  color:var(--mut2);background:var(--surf2);border-bottom:1px solid var(--line)}
+.bm-h .st{color:var(--mut);text-transform:uppercase}
+.bt{display:flex;align-items:center;gap:7px;padding:6px 8px;cursor:pointer;transition:.1s;border-bottom:1px solid var(--line)}
+.bt:last-child{border-bottom:0}
+.bt:hover{background:var(--surf2)}
+.bt img{width:18px;height:13px;border-radius:2px;flex:none;object-fit:cover}
+.bt .flagph{width:18px;height:13px;border-radius:2px;flex:none;background:var(--surf3);display:grid;place-items:center;font-size:8px;color:var(--mut2);font-weight:800}
+.bt .nm{font-size:11.5px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0}
+.bt .nm.ph{color:var(--mut2);font-style:italic;font-weight:600;font-size:10.5px}
+.bt.win{background:rgba(38,230,138,.13)}
+.bt.win .nm{font-weight:800;color:var(--grn)}
+.bt.lost{opacity:.4}
+.bt .pk{margin-left:auto;font-size:10px;color:var(--grn);flex:none;opacity:0;font-weight:800}
+.bt.win .pk{opacity:1}
+.bm.final-bm{border-color:rgba(255,200,69,.42);box-shadow:0 0 0 1px rgba(255,200,69,.14)}
+.bm.final-bm .bm-h{background:linear-gradient(90deg,rgba(255,200,69,.2),transparent)}
+.bm.final-bm .bm-h,.bm.final-bm .bm-h .st{color:var(--gold)}
+
+.brk-champ{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 14px;border-radius:12px;text-align:center;
+  background:linear-gradient(160deg,rgba(255,200,69,.17),var(--surf));border:1px solid rgba(255,200,69,.32);width:100%}
+.brk-champ .ti{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);font-weight:800}
+.brk-champ img{width:42px;border-radius:4px;box-shadow:0 5px 14px rgba(0,0,0,.5)}
+.brk-champ .nm{font-family:'Anton';font-size:17px;line-height:1}
+.brk-champ .ph{color:var(--mut2);font-size:11px;font-style:italic}
+.brk-third{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:174px}
+.brk-third .bm-h,.brk-third .bm-h .st{color:var(--gold)}
 </style>
 </head>
 <body>
@@ -338,6 +395,7 @@ tr.favr{background:rgba(255,200,69,.05)}
       <button class="tab on" data-v="grupos">Grupos</button>
       <button class="tab" data-v="jogos">Jogos</button>
       <button class="tab" data-v="mata">Mata-mata</button>
+      <button class="tab" data-v="chave">Chave 🧪</button>
     </nav>
   </div>
 </header>
@@ -367,6 +425,30 @@ tr.favr{background:rgba(255,200,69,.05)}
       <div class="ko-rhd" id="koRhd"></div>
       <div class="ko-grid" id="bracket"></div>
       <div class="thirds" id="thirdsBox"></div>
+    </div>
+  </section>
+
+  <!-- CHAVE (bracket visual + simulador) -->
+  <section class="view" id="v-chave">
+    <div class="chv-note">🧪
+      <div><b>Simulador visual de chaveamento.</b> Toque num time para fazê-lo <b>vencer e avançar</b> — os cruzamentos se montam sozinhos até a final, e você enxerga os possíveis adversários de cada chave. É um cenário <b>"e se"</b>: não altera seus resultados salvos. Toque de novo no time escolhido para desfazer.</div>
+    </div>
+    <div class="chv-tools">
+      <button class="chv-btn primary" id="brkRand">🎲 Sortear</button>
+      <button class="chv-btn warn" id="brkReset">↺ Resetar</button>
+      <div class="grp">
+        <button class="zbtn" id="zOut" title="Diminuir">−</button>
+        <span class="zlbl" id="zLbl">100%</span>
+        <button class="zbtn" id="zIn" title="Aumentar">+</button>
+        <button class="chv-btn ghost" id="zFit" title="Ajustar à tela">⤢</button>
+      </div>
+    </div>
+    <div class="brk-scroll" id="brkScroll">
+      <div class="brk-sizer" id="brkSizer">
+        <div class="brk-zoom" id="brkZoomEl">
+          <div class="brk" id="brk"></div>
+        </div>
+      </div>
     </div>
   </section>
 </main>
@@ -1169,16 +1251,140 @@ function renderHero(){
 }
 function stateRes(x){return x.ko?state.res[x.id]:state.res[x.id]}
 
+/* ============================ CHAVE: BRACKET VISUAL + SIMULADOR ============================ */
+/* Sandbox "e se": picks NÃO afetam state.res. Persistido em chave própria. */
+const BKEY="copa2026_brk_v1";
+let brkPick={};                 // brkPick["k"+id] = código do vencedor escolhido
+let brkZoom=null;               // null => auto-ajuste de largura no próximo render
+let brkZoomManual=false;        // usuário mexeu no zoom manualmente?
+// Ordem das fases (p/ poda em cascata e sorteio) e quais jogos alimentam cada chave (p/ conectores).
+const KO_ORDER=[73,74,76,75,78,77,79,80,82,81,84,83,88,86,85,87,89,90,91,92,93,94,95,96,97,98,99,100,101,102,104,103];
+const KO_KIDS=(()=>{const k={};for(const id in KO){const f=KO[id].feed||KO[id].feedW;if(f){(k[f[0]]=k[f[0]]||[]).push(+id);}}return k;})();
+function loadBrk(){try{const s=JSON.parse(localStorage.getItem(BKEY));if(s&&s.pick)brkPick=s.pick;}catch(e){}}
+function saveBrk(){try{localStorage.setItem(BKEY,JSON.stringify({pick:brkPick}))}catch(e){}}
+
+// Resolução com overlay de simulação: vencedor escolhido > resultado real > indefinido.
+function ksWinner(id){return brkPick["k"+id]||koWinner(id)||null;}
+function ksLoser(id){const w=ksWinner(id);if(!w)return null;const s=ksSides(id);if(!s.H||!s.A)return null;return w===s.H?s.A:s.H;}
+function ksSides(id){
+  const m=KO[id];
+  if(m.r==="R32"){const {H,A}=koSides(id);return {H:H&&H.c,A:A&&A.c};}   // entrada real (grupos/3ºs)
+  const side=slot=>slot.t==="WIN"?ksWinner(slot.k):slot.t==="LOS"?ksLoser(slot.k):null;
+  return {H:side(m.h),A:side(m.a)};
+}
+// Remove escolhas que deixaram de ser válidas (time não está mais naquela chave). Cascata em ordem de fase.
+function pruneBrk(){
+  for(let pass=0;pass<2;pass++)for(const id of KO_ORDER){
+    const p=brkPick["k"+id];if(!p)continue;
+    const s=ksSides(id);
+    if(p!==s.H&&p!==s.A)delete brkPick["k"+id];
+  }
+}
+function brkSetWinner(id,code){
+  if(brkPick["k"+id]===code)delete brkPick["k"+id];   // toca de novo => desfaz
+  else brkPick["k"+id]=code;
+  pruneBrk();saveBrk();renderChave();
+}
+function brkResetSim(){brkPick={};saveBrk();renderChave();toast("Voltou aos resultados reais");}
+function brkRandom(){
+  for(const id of KO_ORDER){
+    if(brkPick["k"+id]||koWinner(id))continue;          // mantém o já decidido
+    const s=ksSides(id);if(!s.H||!s.A)continue;
+    brkPick["k"+id]=Math.random()<.5?s.H:s.A;
+  }
+  pruneBrk();saveBrk();renderChave();toast("🎲 Cenário sorteado");
+}
+
+function bmSlotLabel(id,which){return slotLabel(KO[id][which==="H"?"h":"a"]);}
+function bmTeamRow(id,which,code,w){
+  if(!code)return `<div class="bt"><span class="flagph">?</span><span class="nm ph">${bmSlotLabel(id,which)}</span></div>`;
+  const isW=w===code,isL=w&&w!==code;
+  return `<div class="bt ${isW?'win':''} ${isL?'lost':''}" data-k="${id}" data-c="${code}">`+
+         `${flagImg(code)}<span class="nm">${tn(code)}</span><span class="pk">✓</span></div>`;
+}
+function bmBox(id){
+  const m=KO[id],{H,A}=ksSides(id),w=ksWinner(id);
+  const st=m.r==="FIN"?"Final":m.r==="3L"?"3º lugar":ROUND_NAMES[m.r];
+  return `<div class="bm ${m.r==="FIN"?'final-bm':''}" data-k="${id}">
+    <div class="bm-h"><span>Jogo ${id}</span><span class="st">${st}</span></div>
+    ${bmTeamRow(id,"H",H,w)}${bmTeamRow(id,"A",A,w)}</div>`;
+}
+function brkChampBox(){
+  const w=ksWinner(104);
+  if(w)return `<div class="brk-champ"><div class="ti">★ Campeão Mundial</div>${flagImg(w)}<div class="nm">${tn(w)}</div></div>`;
+  return `<div class="brk-champ"><div class="ti">★ Campeão Mundial</div><span class="flagph" style="width:42px;height:30px;border-radius:4px">?</span><div class="ph">a definir</div></div>`;
+}
+function renderChave(){
+  pruneBrk();
+  const L_R32=[74,77,73,75,83,84,81,82],L_R16=[89,90,93,94],L_QF=[97,98],L_SF=[101];
+  const R_SF=[102],R_QF=[99,100],R_R16=[91,92,95,96],R_R32=[76,78,79,80,86,88,85,87];
+  const col=(ids,cls)=>`<div class="brk-col ${cls}">${ids.map(bmBox).join("")}</div>`;
+  $("#brk").innerHTML=
+    `<svg class="brk-svg" id="brkSvg"></svg>`+
+    `<div class="brk-side left">${col(L_R32,'r32')}${col(L_R16,'r16')}${col(L_QF,'qf')}${col(L_SF,'sf')}</div>`+
+    `<div class="brk-center">${bmBox(104)}${brkChampBox()}<div class="brk-third">${bmBox(103)}</div></div>`+
+    `<div class="brk-side right">${col(R_SF,'sf')}${col(R_QF,'qf')}${col(R_R16,'r16')}${col(R_R32,'r32')}</div>`;
+  $("#brk").querySelectorAll(".bt[data-c]").forEach(el=>el.onclick=()=>brkSetWinner(+el.dataset.k,el.dataset.c));
+  requestAnimationFrame(()=>{drawBrkConnectors();applyBrkZoom();});
+}
+function drawBrkConnectors(){
+  const brk=$("#brk"),svg=$("#brkSvg");if(!brk||!svg)return;
+  const W=brk.scrollWidth,H=brk.scrollHeight;
+  svg.setAttribute("width",W);svg.setAttribute("height",H);svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
+  const pos=el=>{let x=0,y=0,n=el;while(n&&n!==brk){x+=n.offsetLeft;y+=n.offsetTop;n=n.offsetParent;}return{x,y,w:el.offsetWidth,h:el.offsetHeight};};
+  let d="";
+  for(const tid in KO_KIDS){
+    const tEl=brk.querySelector('.bm[data-k="'+tid+'"]');if(!tEl)continue;
+    const tp=pos(tEl),tCy=tp.y+tp.h/2;
+    for(const sid of KO_KIDS[tid]){
+      const sEl=brk.querySelector('.bm[data-k="'+sid+'"]');if(!sEl)continue;
+      const sp=pos(sEl),sCy=sp.y+sp.h/2;
+      const sx=sp.x<tp.x?sp.x+sp.w:sp.x, tx=sp.x<tp.x?tp.x:tp.x+tp.w, busX=(sx+tx)/2;
+      const cls=ksWinner(+sid)?"cn won":"cn";
+      d+=`<path class="${cls}" d="M ${sx} ${sCy} H ${busX} V ${tCy} H ${tx}"/>`;
+    }
+  }
+  svg.innerHTML=d;
+}
+function applyBrkZoom(){
+  const brk=$("#brk"),zoomEl=$("#brkZoomEl"),sizer=$("#brkSizer"),scroll=$("#brkScroll");
+  if(!brk||!zoomEl||!scroll)return;
+  const W=brk.scrollWidth,H=brk.scrollHeight;
+  if(brkZoom==null){const avail=scroll.clientWidth-16;brkZoom=Math.min(1,Math.max(.22,avail/W));}
+  zoomEl.style.width=W+"px";zoomEl.style.height=H+"px";
+  zoomEl.style.transform="scale("+brkZoom+")";
+  sizer.style.width=(W*brkZoom)+"px";sizer.style.height=(H*brkZoom)+"px";
+  const lbl=$("#zLbl");if(lbl)lbl.textContent=Math.round(brkZoom*100)+"%";
+}
+function setBrkZoom(z){brkZoom=Math.min(1.6,Math.max(.3,z));brkZoomManual=true;applyBrkZoom();}
+let chaveWired=false;
+function setupChave(){
+  if(chaveWired)return;chaveWired=true;
+  $("#brkRand").onclick=brkRandom;
+  $("#brkReset").onclick=brkResetSim;
+  $("#zOut").onclick=()=>setBrkZoom((brkZoom||1)-.15);
+  $("#zIn").onclick=()=>setBrkZoom((brkZoom||1)+.15);
+  $("#zFit").onclick=()=>{brkZoom=null;brkZoomManual=false;applyBrkZoom();};
+  let rt=null;
+  window.addEventListener("resize",()=>{
+    if(!$("#v-chave").classList.contains("on"))return;
+    clearTimeout(rt);rt=setTimeout(()=>{if(!brkZoomManual)brkZoom=null;applyBrkZoom();},150);
+  });
+}
+
 /* ============================ NAV ============================ */
 $("#tabs").onclick=e=>{const b=e.target.closest(".tab");if(!b)return;
   document.querySelectorAll(".tab").forEach(t=>t.classList.remove("on"));b.classList.add("on");
   document.querySelectorAll(".view").forEach(v=>v.classList.remove("on"));
   $("#v-"+b.dataset.v).classList.add("on");
-  if(b.dataset.v==="jogos")renderJogos();if(b.dataset.v==="mata")renderMata();
+  if(b.dataset.v==="jogos")renderJogos();
+  if(b.dataset.v==="mata")renderMata();
+  if(b.dataset.v==="chave"){setupChave();renderChave();}
 };
 function refresh(){simThirdsCache=null;renderGroups();renderHero();
   if($("#v-jogos").classList.contains("on"))renderJogos();
   if($("#v-mata").classList.contains("on"))renderMata();
+  if($("#v-chave").classList.contains("on"))renderChave();
 }
 
 /* ============================ TOAST ============================ */
@@ -1426,6 +1632,7 @@ function openFavModal(){
 $("#favBtn").onclick=openFavModal;
 
 /* ============================ INIT ============================ */
+loadBrk();
 renderGroups();renderHero();
 setSync("ok","Resultados ao vivo");
 // backfill inicial silencioso + início do polling
