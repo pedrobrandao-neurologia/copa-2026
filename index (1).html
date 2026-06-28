@@ -170,28 +170,50 @@ tr.q3{box-shadow:inset 3px 0 0 rgba(255,200,69,.5)}
 /* ===== Mata-mata ===== */
 .kowrap{margin-top:18px}
 .konote{display:flex;gap:12px;align-items:flex-start;background:var(--surf);border:1px solid var(--line);
-  border-radius:13px;padding:13px 15px;font-size:12.5px;color:var(--mut);margin-bottom:18px;line-height:1.5}
+  border-radius:13px;padding:13px 15px;font-size:12.5px;color:var(--mut);margin-bottom:16px;line-height:1.5}
 .konote b{color:var(--tx)}
-.bracket{display:flex;gap:18px;overflow-x:auto;padding-bottom:18px;-webkit-overflow-scrolling:touch}
-.bracket::-webkit-scrollbar{height:8px}
-.bracket::-webkit-scrollbar-thumb{background:var(--surf2);border-radius:8px}
-.rnd{flex:none;width:248px;display:flex;flex-direction:column;gap:11px}
-.rnd-h{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--mut);
-  padding:6px 4px;position:sticky;top:0}
-.rnd.r32{width:262px}
-.kmatch{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:10px 11px;transition:.12s;width:100%;text-align:left}
-.kmatch:hover{border-color:var(--line2)}
-.kmatch .kid{font-size:9.5px;color:var(--mut2);font-weight:700;display:flex;justify-content:space-between;margin-bottom:7px}
-.kmatch .kid .kt{color:var(--mut)}
-.kside{display:flex;align-items:center;gap:8px;padding:4px 0}
-.kside img{width:22px;height:16px;border-radius:3px;flex:none;object-fit:cover}
-.kside .flagph{width:22px;height:16px;border-radius:3px;flex:none;background:var(--surf3);display:grid;place-items:center;font-size:9px;color:var(--mut2);font-weight:800}
-.kside .nm{font-size:12.5px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.kside .nm.ph{color:var(--mut2);font-weight:600;font-style:italic;font-size:11.5px}
-.kside .ks{margin-left:auto;font-size:14px;font-weight:800;width:22px;text-align:center}
+
+/* Navegação por fase — uma rodada por vez (vertical), sem arrastão lateral da chave inteira */
+.ko-rounds{display:flex;gap:7px;overflow-x:auto;padding:2px 2px 12px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.ko-rounds::-webkit-scrollbar{display:none}
+.ko-rtab{flex:none;display:flex;align-items:center;gap:7px;white-space:nowrap;border:1px solid var(--line);
+  background:var(--surf);border-radius:999px;padding:9px 14px;font-size:12px;font-weight:700;color:var(--mut);transition:.12s}
+.ko-rtab .c{font-size:9.5px;font-weight:800;background:var(--surf3);color:var(--mut);border-radius:999px;padding:2px 7px;min-width:20px;text-align:center}
+.ko-rtab.on{background:var(--grad);color:#06121f;border-color:transparent}
+.ko-rtab.on .c{background:rgba(6,18,31,.16);color:#06121f}
+.ko-rtab:active{transform:scale(.96)}
+.ko-rhd{display:flex;align-items:baseline;gap:10px;margin:2px 2px 14px;flex-wrap:wrap}
+.ko-rhd .t{font-family:'Anton';font-size:19px;letter-spacing:.5px}
+.ko-rhd .s{font-size:11.5px;color:var(--mut);font-weight:600}
+.ko-grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:540px){.ko-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:920px){.ko-grid{grid-template-columns:1fr 1fr 1fr}}
+
+.kmatch{background:var(--surf);border:1px solid var(--line);border-radius:14px;padding:12px 13px;transition:.16s;width:100%;text-align:left;display:block}
+.kmatch.clk{cursor:pointer}
+.kmatch.clk:hover{border-color:var(--line2)}
+.kmatch.flash{animation:koflash 1.4s ease}
+@keyframes koflash{0%,100%{border-color:var(--line);box-shadow:none}28%{border-color:var(--blu);box-shadow:0 0 0 3px rgba(91,162,255,.18)}}
+.kmatch .kid{font-size:9.5px;color:var(--mut2);font-weight:800;letter-spacing:.4px;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.kmatch .kid .kt{color:var(--mut);text-transform:uppercase}
+.kside{display:flex;align-items:center;gap:9px;padding:5px 0}
+.kside img{width:24px;height:18px;border-radius:3px;flex:none;object-fit:cover}
+.kside .flagph{width:24px;height:18px;border-radius:3px;flex:none;background:var(--surf3);display:grid;place-items:center;font-size:9px;color:var(--mut2);font-weight:800}
+.kside .kmid{min-width:0;flex:1;display:flex;flex-direction:column;gap:1px}
+.kside .nm{font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.kside .nm.ph{color:var(--mut2);font-weight:600;font-style:italic;font-size:12px}
+.kside .korig{font-size:9.5px;font-weight:700;color:var(--mut2);letter-spacing:.2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kside .korig.lk{color:var(--blu)}
+.kside .ks{margin-left:auto;font-size:15px;font-weight:800;width:22px;text-align:center;flex:none}
 .kside.win .nm{font-weight:800}
 .kside.lose{opacity:.5}
-.kmatch .kfoot{font-size:10px;color:var(--mut2);font-weight:600;margin-top:7px;display:flex;justify-content:space-between;gap:6px}
+.kvs{height:1px;background:var(--line);margin:3px 0}
+.kfeed{margin-top:10px;padding-top:9px;border-top:1px dashed var(--line);display:flex;flex-direction:column;gap:6px}
+.kfeed .row{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--mut);font-weight:600;flex-wrap:wrap}
+.kfeed .ar{color:var(--mut2)}
+.lk2{color:var(--blu);font-weight:800;background:rgba(91,162,255,.1);border-radius:6px;padding:2px 8px;font-size:10.5px}
+.lk2:active{transform:scale(.96)}
+.kmatch .kfoot{font-size:10px;color:var(--mut2);font-weight:600;margin-top:9px;display:flex;justify-content:space-between;gap:6px}
 .final-card{background:linear-gradient(150deg,var(--surf2),var(--ink2));border-color:var(--line2)}
 .final-card .kid .kt{color:var(--gold)}
 .champ{display:flex;flex-direction:column;align-items:center;gap:10px;padding:18px;background:linear-gradient(160deg,rgba(255,200,69,.13),var(--surf));
@@ -283,7 +305,7 @@ tr.favr{background:rgba(255,200,69,.05)}
 .simhint i{color:var(--vio)}
 .kside.simgh .nm{font-style:italic;color:var(--vio);font-weight:600}
 .kside.simgh img{opacity:.8}
-.bracket.simmode .kmatch{border-style:dashed}
+.ko-grid.simmode .kmatch{border-style:dashed}
 /* ===== Compartilhar ===== */
 .shbtn{font-size:14px;padding:6px 8px;border-radius:8px;color:var(--mut);transition:.12s;flex:none}
 .shbtn:hover{background:var(--surf2);color:var(--tx)}
@@ -338,10 +360,12 @@ tr.favr{background:rgba(255,200,69,.05)}
     <div class="kowrap">
       <div class="konote">
         <span style="font-size:18px">🏆</span>
-        <div>Os <b>16 jogos das oitavas de 32</b> são preenchidos automaticamente conforme a classificação dos grupos. As vagas de <b>melhor 3º colocado</b> ficam abertas até a fase de grupos terminar — toque no jogo para definir quem avança (incluindo decisão por pênaltis). Vencedores avançam sozinhos pelo chaveamento oficial até a final no <b>MetLife (Nova Jersey)</b>, 19/07.</div>
+        <div>As <b>16 chaves das oitavas de 32</b> são preenchidas pela classificação dos grupos — e as <b>8 vagas de melhor 3º colocado</b> entram sozinhas assim que a fase de grupos termina. Navegue pelas <b>abas de fase</b>; cada jogo mostra <b>de onde vêm</b> os times e <b>para qual chave</b> o vencedor avança (toque para saltar). Toque num jogo para ajustar o placar, inclusive pênaltis. Final no <b>MetLife (Nova Jersey)</b>, 19/07.</div>
       </div>
       <div class="simbar" id="simbar"></div>
-      <div class="bracket" id="bracket"></div>
+      <div class="ko-rounds" id="koRounds"></div>
+      <div class="ko-rhd" id="koRhd"></div>
+      <div class="ko-grid" id="bracket"></div>
       <div class="thirds" id="thirdsBox"></div>
     </div>
   </section>
@@ -695,15 +719,18 @@ function simThirds(){
   })(0);
   simThirdsCache=res;return res;
 }
+function allGroupsDone(){return Object.keys(GROUPS).every(g=>groupComplete(g));}
 function koSides(id){
   const m=KO[id];
   let H=koTeam(m.h), A=koTeam(m.a);
   if(m.h.t==="T3"&&state.third[id+"H"])H={c:state.third[id+"H"]};
   if(m.a.t==="T3"&&state.third[id+"A"])A={c:state.third[id+"A"]};
-  if(SIM){
+  // Preenche as vagas de melhor 3º: em projeção (SIM) OU automaticamente assim que a
+  // fase de grupos termina (o ranking dos 3ºs já é final). sim=false => time real, sem itálico.
+  if(SIM||allGroupsDone()){
     const al=simThirds();
-    if(m.h.t==="T3"&&!H&&al[id])H={c:al[id],sim:true};
-    if(m.a.t==="T3"&&!A&&al[id])A={c:al[id],sim:true};
+    if(m.h.t==="T3"&&!H&&al[id])H={c:al[id],sim:SIM};
+    if(m.a.t==="T3"&&!A&&al[id])A={c:al[id],sim:SIM};
   }
   return {H,A};
 }
@@ -834,8 +861,27 @@ function jogoRow(m){
 }
 
 /* ============================ RENDER: MATA-MATA ============================ */
+// Fases do mata-mata, em ordem. ids = jogos daquela fase. tab=rótulo curto; title=cabeçalho.
+const KO_ROUNDS=[
+  {k:"R32",tab:"Oitavas de 32",title:"Oitavas de 32",ids:[73,74,76,75,78,77,79,80,82,81,84,83,88,86,85,87]},
+  {k:"R16",tab:"Oitavas",title:"Oitavas de final",ids:[89,90,91,92,93,94,95,96]},
+  {k:"QF", tab:"Quartas", title:"Quartas de final",ids:[97,98,99,100]},
+  {k:"SF", tab:"Semis",   title:"Semifinais",ids:[101,102]},
+  {k:"FIN",tab:"Final",   title:"Final & disputa de 3º",ids:[104,103]},
+];
+let koRound=null, koFlash=null;
+function koRoundOf(id){const r=KO[id].r;return r==="3L"?"FIN":r;}            // 3º lugar fica na aba da Final
+function defaultKoRound(){                                                   // 1ª fase ainda não decidida
+  for(const rd of KO_ROUNDS){ if(rd.ids.some(id=>!koWinner(id)))return rd.k; }
+  return "FIN";
+}
+function goToKoMatch(id){                                                    // salta p/ a fase do jogo e destaca
+  koRound=koRoundOf(id); koFlash=id; renderMata();
+  const el=$("#bracket").querySelector('.kmatch[data-k="'+id+'"]');
+  if(el)el.scrollIntoView({behavior:"smooth",block:"center"});
+}
 function renderMata(){
-  const allDone=Object.keys(GROUPS).every(g=>groupComplete(g));
+  const allDone=allGroupsDone();
   const anyStarted=GM.some(m=>{const r=state.res[m[0]];return r&&r.h!=null&&r.a!=null});
   const sb=$("#simbar");
   if(allDone||!anyStarted){sb.innerHTML="";simOn=false;}
@@ -843,27 +889,29 @@ function renderMata(){
     (simOn?`<span class="simhint">times em <i>itálico</i> = projeção ("se terminasse hoje") · edição pausada</span>`:
            `<span class="simhint">veja quem estaria no mata-mata se a fase de grupos terminasse agora</span>`);
   SIM=simOn&&!allDone; simThirdsCache=null;
-  const br=$("#bracket");br.innerHTML="";
-  br.classList.toggle("simmode",SIM);
-  const cols=[["R32",[73,74,76,75,78,77,79,80,82,81,84,83,88,86,85,87]],
-             ["R16",[89,90,91,92,93,94,95,96]],
-             ["QF",[97,98,99,100]],
-             ["SF",[101,102]],
-             ["FIN",[104,103]]];
-  cols.forEach(([rk,ids])=>{
-    const col=document.createElement("div");col.className="rnd"+(rk==="R32"?" r32":"");
-    col.innerHTML=`<div class="rnd-h">${ROUND_NAMES[rk]}</div>`;
-    ids.forEach(id=>col.insertAdjacentHTML("beforeend",koCard(id)));
-    br.appendChild(col);
-  });
-  // campeão
-  const champCol=document.createElement("div");champCol.className="rnd";
-  champCol.innerHTML=`<div class="rnd-h">Campeão</div>`+champCard();
-  br.appendChild(champCol);
+  if(!koRound||!KO_ROUNDS.some(r=>r.k===koRound))koRound=defaultKoRound();
+  const rd=KO_ROUNDS.find(r=>r.k===koRound);
+
+  // abas de fase (com contador de jogos decididos)
+  $("#koRounds").innerHTML=KO_ROUNDS.map(r=>{
+    const d=r.ids.filter(id=>koWinner(id)).length;
+    return `<button class="ko-rtab ${r.k===koRound?'on':''}" data-rk="${r.k}"><span>${r.tab}</span><span class="c">${d}/${r.ids.length}</span></button>`;
+  }).join("");
+  // cabeçalho da fase
+  const dec=rd.ids.filter(id=>koWinner(id)).length;
+  $("#koRhd").innerHTML=`<span class="t">${rd.title}</span><span class="s">${dec}/${rd.ids.length} ${rd.ids.length===1?'definido':'definidos'}</span>`;
+  // grade de jogos da fase ativa (+ pódio do campeão na Final)
+  const grid=$("#bracket");
+  grid.classList.toggle("simmode",SIM);
+  grid.innerHTML=rd.ids.map(id=>koCard(id)).join("")+(rd.k==="FIN"?champCard():"");
+
   const simNow=SIM;
-  br.querySelectorAll(".kmatch[data-k]").forEach(b=>b.onclick=simNow
+  $("#koRounds").querySelectorAll(".ko-rtab").forEach(b=>b.onclick=()=>{koRound=b.dataset.rk;koFlash=null;renderMata();});
+  grid.querySelectorAll(".kmatch[data-k]").forEach(b=>b.onclick=simNow
     ?()=>toast("🔮 Projeção ativa — desative para editar resultados")
     :()=>openKoEditor(+b.dataset.k));
+  grid.querySelectorAll("[data-go]").forEach(el=>el.onclick=e=>{e.stopPropagation();goToKoMatch(+el.dataset.go);});
+  if(koFlash!=null){const fe=grid.querySelector('.kmatch[data-k="'+koFlash+'"]');if(fe)fe.classList.add("flash");koFlash=null;}
   SIM=false;
   const st=$("#simTog");if(st)st.onclick=()=>{simOn=!simOn;renderMata()};
   renderThirds();
@@ -876,26 +924,54 @@ function slotLabel(slot){
   if(slot.t==="LOS")return "Perdedor J"+slot.k;
   return "";
 }
+/* Origem do lado (de onde o time vem) — mostra a linhagem mesmo já preenchido.
+   Slots WIN/LOS viram link clicável que salta para o jogo de origem. */
+function originHTML(slot){
+  if(slot.t==="W")return `<span class="korig">1º do Grupo ${slot.g}</span>`;
+  if(slot.t==="R")return `<span class="korig">2º do Grupo ${slot.g}</span>`;
+  if(slot.t==="T3")return `<span class="korig">Melhor 3º · ${slot.g.join("/")}</span>`;
+  if(slot.t==="WIN")return `<span class="korig lk" data-go="${slot.k}">▸ Vencedor do Jogo ${slot.k}</span>`;
+  if(slot.t==="LOS")return `<span class="korig lk" data-go="${slot.k}">▸ Perdedor do Jogo ${slot.k}</span>`;
+  return "";
+}
 function koSideHTML(id,slot,which){
   const {H,A}=koSides(id), team=which==="H"?H:A;
   const w=koWinner(id), played=state.res["k"+id];
+  const orig=originHTML(slot);
   if(team){
     const isW=!team.sim&&w===team.c, isL=!team.sim&&played&&w&&w!==team.c;
     const r=state.res["k"+id]; let sc="";
     if(!team.sim&&r&&r.h!=null&&r.a!=null)sc=`<span class="ks">${which==="H"?r.h:r.a}</span>`;
-    return `<div class="kside ${isW?'win':''} ${isL?'lose':''} ${team.sim?'simgh':''}">${flagImg(team.c)}<span class="nm">${tn(team.c)}</span>${sc}</div>`;
+    return `<div class="kside ${isW?'win':''} ${isL?'lose':''} ${team.sim?'simgh':''}">${flagImg(team.c)}<div class="kmid"><span class="nm">${tn(team.c)}</span>${orig}</div>${sc}</div>`;
   }
-  return `<div class="kside"><span class="flagph">?</span><span class="nm ph">${slotLabel(slot)}</span></div>`;
+  return `<div class="kside"><span class="flagph">?</span><div class="kmid"><span class="nm ph">A definir</span>${orig}</div></div>`;
+}
+/* Para onde o vencedor (e o perdedor, na semi) avança — torna o cruzamento explícito e navegável. */
+function koFeedHTML(id){
+  const m=KO[id];
+  const link=(tid,who)=>{
+    const r=KO[tid].r, lbl=r==="FIN"?"Final":r==="3L"?"Disputa de 3º":"Jogo "+tid;
+    const st=(r==="FIN"||r==="3L")?"":" · "+ROUND_NAMES[r];
+    return `<div class="row"><span class="ar">${who}</span><span class="lk2" data-go="${tid}">→ ${lbl}</span><span class="ar">${st}</span></div>`;
+  };
+  let rows="";
+  if(m.feed)rows=link(m.feed[0],"Vencedor avança");
+  else if(m.feedW){rows=link(m.feedW[0],"Vencedor")+(m.feedL?link(m.feedL[0],"Perdedor"):"");}
+  else if(m.r==="FIN")rows=`<div class="row"><span class="ar">🏆 O vencedor é o</span><b style="color:var(--gold)">Campeão Mundial</b></div>`;
+  else if(m.r==="3L")rows=`<div class="row"><span class="ar">🥉 Define o 3º lugar do Mundial</span></div>`;
+  return rows?`<div class="kfeed">${rows}</div>`:"";
 }
 function koCard(id){
   const m=KO[id], sp=spParts(m.d);
   const isFinal=m.r==="FIN", is3=m.r==="3L";
-  return `<button class="kmatch ${isFinal?'final-card':''}" data-k="${id}">
-    <div class="kid"><span>Jogo ${id}</span><span class="kt">${isFinal?'🏆 Final':is3?'3º lugar':ROUND_NAMES[m.r]}</span></div>
+  return `<div class="kmatch clk ${isFinal?'final-card':''}" data-k="${id}">
+    <div class="kid"><span>Jogo ${id}</span><span class="kt">${isFinal?'🏆 Final':is3?'🥉 3º lugar':ROUND_NAMES[m.r]}</span></div>
     ${koSideHTML(id,m.h,"H")}
+    <div class="kvs"></div>
     ${koSideHTML(id,m.a,"A")}
+    ${koFeedHTML(id)}
     <div class="kfoot"><span>${sp.dow} ${sp.date} · ${sp.time}</span><span>${m.c}</span></div>
-  </button>`;
+  </div>`;
 }
 function champCard(){
   const w=koWinner(104);
@@ -961,9 +1037,9 @@ function openKoEditor(id){
   let {H,A}=koSides(id);
   edData={kind:"ko",id};
   const mod=$("#modal");
-  // selects para vagas de 3º não definidas
-  const selH=(m.h.t==="T3"&&!H)?t3Select(id,"H",m.h.g):"";
-  const selA=(m.a.t==="T3"&&!A)?t3Select(id,"A",m.a.g):"";
+  // seletor de melhor 3º: sempre disponível p/ vagas T3 (preenchidas automaticamente, mas ajustáveis)
+  const selH=(m.h.t==="T3")?t3Select(id,"H",m.h.g,H&&H.c):"";
+  const selA=(m.a.t==="T3")?t3Select(id,"A",m.a.g,A&&A.c):"";
   ({H,A}=koSides(id));
   const hName=H?tn(H.c):slotLabel(m.h), aName=A?tn(A.c):slotLabel(m.a);
   mod.innerHTML=`<div class="grab"></div>
@@ -1016,11 +1092,11 @@ function wireAdv(){
     if(!on)o.classList.add("on");
   });
 }
-function t3Select(id,which,groups){
+function t3Select(id,which,groups,cur){
   const r=thirdsRanking().filter(x=>x.rank<=8&&groups.includes(x.g));
-  const opts=r.map(x=>`<option value="${x.c}">${tn(x.c)} (Grp ${x.g})</option>`).join("");
-  return `<div class="m-sel"><label>Definir melhor 3º (grupos ${groups.join("/")})</label>
-    <select data-t3="${which}" data-id="${id}"><option value="">— selecionar —</option>${opts}</select></div>`;
+  const opts=r.map(x=>`<option value="${x.c}" ${x.c===cur?'selected':''}>${tn(x.c)} (Grp ${x.g})</option>`).join("");
+  return `<div class="m-sel"><label>Melhor 3º (grupos ${groups.join("/")}) · automático, ajustável</label>
+    <select data-t3="${which}" data-id="${id}"><option value="">— automático —</option>${opts}</select></div>`;
 }
 function wireT3(id){
   $("#modal").querySelectorAll("select[data-t3]").forEach(s=>s.onchange=()=>{
@@ -1162,6 +1238,7 @@ function applyResult(hc,ac,hg,ag,winnerCode,iso){
     const cur=state.res[gm[0]];
     if(cur&&cur.h===nh&&cur.a===na)return false;            // já estava igual
     state.res[gm[0]]={h:nh,a:na};
+    simThirdsCache=null;                                     // ranking dos 3ºs mudou — recalcular alocação
     return true;
   }
 
